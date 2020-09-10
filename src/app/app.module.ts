@@ -10,6 +10,8 @@ import { SliderComponent } from './slider/slider.component';
 import { MosaiqueComponent } from './mosaique/mosaique.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatGridListModule  ],
+    MatGridListModule,
+    MatCardModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
-}
 
 @Component({
   selector: 'app-mosaique',
@@ -13,21 +7,27 @@ export interface Tile {
   styleUrls: ['./mosaique.component.scss']
 })
 export class MosaiqueComponent implements OnInit {
+title = 'mosaique';
+public list = [];
 
-  tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
 
-  constructor() { }
+ public ngOnInit() {
+   this.list = [
+     { rows : 1, cols: 1, data: 1},
+     {rows : 1, cols: 1, data: 2},
+     {rows : 2, cols: 2, data: 3},
+     {rows : 1, cols: 1, data: 4},
 
-  ngOnInit(): void {
-  }
+     {rows : 1, cols: 2, data: 5},
+     {rows : 1, cols: 2, data: 6},
+     {rows : 2, cols: 1, data: 7},
+     {rows : 1, cols: 2, data: 8},
+
+
+
+
+
+   ]
+ }
 
 }
