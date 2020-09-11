@@ -1,0 +1,12 @@
+<h1>
+    {{title}}
+</h1>
+
+<div *ngFor='let bebe of videoList'>
+    <a href='videos/{{ bebe.slug }}'>{{ bebe.name }}</a>
+    <div [innerHTML]='bebe.embed'></div>
+    <div [innerHTML]='someItem'></div>
+
+    <div style="position: relative;height: 0; padding-bottom:56.25%" *ngIf='bebe.embed'>
+        <iframe [src]="getEmbedUrl(bebe)" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>

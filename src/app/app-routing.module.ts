@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { MosaiqueComponent } from './pages/mosaique/mosaique.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'mosaique', component: MosaiqueComponent}
 
 ];
 

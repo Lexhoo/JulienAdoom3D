@@ -355,7 +355,7 @@ p {
 // Styling
 // =================================
 $letters: 7;
-$teal: #16e590;
+$teal: #e00909;
 $cubic-slow: cubic-bezier(0.7,
 0.01,
 0.37,
@@ -436,6 +436,7 @@ $cubic-slow: cubic-bezier(0.7,
 
 .card {
     display: inline-flex;
+    margin-left: 8em;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -446,7 +447,8 @@ $cubic-slow: cubic-bezier(0.7,
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
     background-size: cover;
     cursor: pointer;
-    margin: 0 100px 60px 0;
+    // margin: 0 100px 60px 0;
+    margin-left: 8em;
     &:before {
         content: '';
         display: block;
@@ -472,7 +474,7 @@ $cubic-slow: cubic-bezier(0.7,
             transform: scale(1.1);
             .polygon {
                 transform: translateZ(0px) rotate(90deg);
-                fill: #67fbbe;
+                fill: #e00909;
             }
         }
         // text roll

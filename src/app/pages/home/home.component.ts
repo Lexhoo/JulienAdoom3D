@@ -24,6 +24,10 @@ export class HomeComponent implements OnInit {
     // this.videoplayer.nativeElement.close();
   }
 
+  fantome(){
+    console.log('je suis un fantome');
+  }
+
 }
 
 
