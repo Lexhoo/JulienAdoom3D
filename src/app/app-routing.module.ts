@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MosaiqueComponent } from './pages/mosaique/mosaique.component';
 
 const routes: Routes = [
+  // { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
   { path: 'mosaique', component: MosaiqueComponent}
 

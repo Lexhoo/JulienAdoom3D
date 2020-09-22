@@ -1,12 +1,43 @@
-<h1>
-    {{title}}
-</h1>
+<video autoplay muted loop id="myVideo">
+  <source src="../../../assets/marvel-studios-black-panther-official-trailer.mp4" type="video/mp4">
+</video>
 
-<div *ngFor='let bebe of videoList'>
-    <a href='videos/{{ bebe.slug }}'>{{ bebe.name }}</a>
-    <div [innerHTML]='bebe.embed'></div>
-    <div [innerHTML]='someItem'></div>
-
-    <div style="position: relative;height: 0; padding-bottom:56.25%" *ngIf='bebe.embed'>
-        <iframe [src]="getEmbedUrl(bebe)" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum...</p>
+    <!-- Use a button to pause/play the video with JavaScript -->
+    <button id="myBtn" onclick="myFunction()">Pause</button>
 </div>
+
+
+
+<!-- <header>
+    <div class="overlay"></div>
+    <video controls=a utoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://youtu.be/weZFfrjF-k4" type="video/mp4">
+  </video>
+    <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                <h1 class="display-3">Video Header</h1>
+                <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are build into Bootstrap 4.</p>
+                <p>The overlay color can be changed by changing the <code>background-color</code> of the <code>.overlay</code> class in the CSS.</p>
+                <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
+                <p class="mb-0">
+                    Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section> -->

@@ -1,4 +1,22 @@
 <div class="hero">
+    <iframe src="https://player.vimeo.com/video/293402906" width="640" height="360" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+
+    <script>
+        require(['https://player.vimeo.com/api/player.js'], function(Player) {
+            var iframe = document.querySelector('iframe');
+            var player = new Player(iframe);
+
+            player.on('play', function() {
+                console.log('played the video!');
+            });
+        });
+
+        player.getFullscreen().then(function(fullscreen) {
+            // fullscreen = whether fullscreen is turned on or off
+        }).catch(function(error) {
+            // an error occurred
+        });
+    </script>
     <section class="banner">
         <div class="container">
             <div class="row">
@@ -10,8 +28,11 @@
                     <a href="#" class="btnD1">Read More</a>
                 </div>
             </div>
+
+
+
             <h1>Exclusive Premiere</h1>
-            <div class="card" style="background-image: url('../../../assets/black1.jpg')">
+            <!-- <div class="card" style="background-image: url('../../../assets/black1.jpg')">
                 <div class="card__content">
                     <a class="play-button" (click)="fantome()">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
@@ -40,9 +61,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <script>
+            <!-- <script>
                 // inspiration: https://www.valerian.bnpparibas/en
 
                 // tilt.js
@@ -373,7 +394,7 @@
                     maxGlare: .2,
                     maxTilt: 5
                 });
-            </script>
+            </script> -->
             <div class="balls">
                 <img src="../../../assets/scratch.png">
                 <img src="../../../assets/scratch.png">
