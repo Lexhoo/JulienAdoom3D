@@ -1,17 +1,27 @@
-<!-- <div class="row pb-4">
-    <div *ngFor="let image of images" class="card" style="width: 10rem;">
-        <div class="card-body">
-            <img src="{{ image.imageUrl }}" class="card-img" alt="{{ image.imageUrl }}">
-            <h5 class="card-title ">{{ image.titre }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted ">{{ image.dateCreation }}</h6>
-            <h6 class="card-subtitle mb-2 text-muted ">{{ image.resume }}</h6>
-            <h6 class="card-subtitle mb-2 text-muted ">{{ image.videoUrl }}</h6>
-
-        </div>
+<body>
+    <div class="grid">
+        <a *ngFor="let image of images" href="{{ image.imageUrl }}" data-lightbox="mansoryGallery">
+            <div class="gallery">
+                <img src="{{ image.imageUrl }}" class="img" alt="">
+                <h2>{{image.titre}}</h2>
+            </div>
+        </a>
     </div>
-</div> -->
 
-<div class="main">
+    <script src="../../../assets/jsFolder/lightbox.js"></script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<!-- <div class="main">
     <div class="gallery">
         <div *ngFor="let image of images">
             <h2>BlaBlaBla</h2>
@@ -19,4 +29,4 @@
             <h2>{{image.titre}}</h2>
         </div>
     </div>
-</div>
+</div> -->

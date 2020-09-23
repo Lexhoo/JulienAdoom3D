@@ -13,6 +13,9 @@ import { VideoListComponent } from './pages/video-list/video-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ImageUpComponent } from './pages/image-up/image-up.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { ImageUpComponent } from './pages/image-up/image-up.component';
     ImageUpComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,11 @@ import { ImageUpComponent } from './pages/image-up/image-up.component';
     MatGridListModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+
     ],
   providers: [],
   bootstrap: [AppComponent]

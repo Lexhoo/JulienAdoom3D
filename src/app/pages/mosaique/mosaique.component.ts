@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { UploadImageService } from '../../services/upload-image.service';
+import { UploadFilesComponent } from '../../models/upload-files/upload-files.component';
 
 @Component({
   selector: 'app-mosaique',
@@ -7,27 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mosaique.component.scss']
 })
 export class MosaiqueComponent implements OnInit {
-title = 'mosaique';
-public list = [];
 
+  images: UploadFilesComponent[] = [];
 
- public ngOnInit() {
-   this.list = [
-     { rows : 1, cols: 1, data: 1},
-     {rows : 1, cols: 1, data: 2},
-     {rows : 2, cols: 2, data: 3},
-     {rows : 1, cols: 1, data: 4},
+  constructor(private UploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) {  }
 
-     {rows : 1, cols: 2, data: 5},
-     {rows : 1, cols: 2, data: 6},
-     {rows : 2, cols: 1, data: 7},
-     {rows : 1, cols: 2, data: 8},
+  ngOnInit(): void {
 
-
-
-
-
-   ]
- }
+    this.UploadImageService.getAll().subscribe(images => {
+      this.images = images
+    })
+  }
 
 }
