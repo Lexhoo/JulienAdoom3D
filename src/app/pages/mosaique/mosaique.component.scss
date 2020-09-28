@@ -14,7 +14,6 @@
         margin-bottom: 16px;
         position: relative;
         &:before {
-            border-radius: 5px;
             content: '';
             position: absolute;
             top: 0;
@@ -24,7 +23,6 @@
         }
         img {
             width: 100%;
-            border-radius: 5px;
         }
         &__title {
             font-size: 28px;
@@ -56,11 +54,14 @@
         &__tag {
             background-color: green;
             color: #333;
-            border-radius: 5px;
             padding: 5px 15px;
             margin-bottom: 5px;
         }
     }
+}
+
+img:hover {
+    opacity: 0.95;
 }
 
 .mt-auto {
@@ -104,12 +105,9 @@ button:hover {
 }
 
 .card {
-    padding: 0.6rem;
     outline: none;
     border: none;
     border-radius: 3px;
-    background: white;
-    color: black;
     font-weight: bold;
     cursor: pointer;
     transition: 0.4s ease;
