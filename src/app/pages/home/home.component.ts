@@ -14,10 +14,35 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const player = new Player('handstick', {
-      id: 19231868,
-      width: 640
-  });
+
+//     var player=document.getElementById('player');
+
+//     var elem = document.getElementById("player");
+// if (elem.requestFullscreen) {
+//   elem.requestFullscreen();
+// }
+
+
+  //   const player = new Player('handstick', {
+  //     id: 19231868,
+  //     width: 640
+  // });
+
+
+        // require(['https://player.vimeo.com/api/player.js'], function(Player) {
+        //     var iframe = document.querySelector('iframe');
+        //     var player = new Player(iframe);
+
+        //     player.on('play', function() {
+        //         console.log('played the video!');
+        //     });
+        // });
+
+        // player.getFullscreen().then(function(fullscreen) {
+        //     // fullscreen = whether fullscreen is turned on or off
+        // }).catch(function(error) {
+        //     // an error occurred
+        // });
 
 
 

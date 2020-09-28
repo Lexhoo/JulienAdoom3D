@@ -16,6 +16,7 @@ import { ImageUpComponent } from './pages/image-up/image-up.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ProjetComponent } from './pages/projet/projet.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MosaiqueComponent,
     VideoListComponent,
     ImageUpComponent,
+    ProjetComponent,
 
 
 

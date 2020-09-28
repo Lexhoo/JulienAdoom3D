@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UploadImageService } from '../../services/upload-image.service';
-import { UploadFilesComponent } from '../../models/upload-files/upload-files.component';
+import { ProjetService } from 'src/app/services/projet.service';
+import { UploadFiles } from 'src/app/models/upload-files';
 
 @Component({
   selector: 'app-mosaique',
@@ -10,15 +11,22 @@ import { UploadFilesComponent } from '../../models/upload-files/upload-files.com
 })
 export class MosaiqueComponent implements OnInit {
 
-  images: UploadFilesComponent[] = [];
+  images: UploadFiles[] = [];
 
-  constructor(private UploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) {  }
+  constructor(private projetService: ProjetService, private uploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) {  }
+  projetImage = null;
 
   ngOnInit(): void {
 
-    this.UploadImageService.getAll().subscribe(images => {
-      this.images = images
-    })
+    this.uploadImageService.getAll().subscribe({
+      next: (images) => {
+      this.images = images;
+    },
+    error: (err) => {
+      if (err.error.status === 404) {
+        console.log("Pas de fichiers trouvés");
+      }
+      console.log("err", err);
+    }});
   }
-
 }

@@ -1,0 +1,9 @@
+<p>projet works!</p>
+<div *ngIf="isErreur">
+    <h1>{{ messageErreur }}</h1>
+</div>
+<div *ngIf="!isErreur">
+    <div *ngFor="let image of images">
+        <img src="{{ image.imageUrl }}" />
+    </div>
+</div>

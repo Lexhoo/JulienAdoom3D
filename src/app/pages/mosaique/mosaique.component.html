@@ -1,32 +1,5 @@
-<body>
-    <div class="grid">
-        <a *ngFor="let image of images" href="{{ image.imageUrl }}" data-lightbox="mansoryGallery">
-            <div class="gallery">
-                <img src="{{ image.imageUrl }}" class="img" alt="">
-                <h2>{{image.titre}}</h2>
-            </div>
-        </a>
+<div class="masonry">
+    <div class="grid" *ngFor="let image of images">
+        <a [routerLink]="['/../projet', image.idProjet]" class="card"> <img src="{{image.imageUrl}}"></a>
     </div>
-
-    <script src="../../../assets/jsFolder/lightbox.js"></script>
-
-
-</body>
-
-
-
-
-
-
-
-
-
-<!-- <div class="main">
-    <div class="gallery">
-        <div *ngFor="let image of images">
-            <h2>BlaBlaBla</h2>
-            <img src="{{ image.imageUrl }}" class="image" alt="{{ image.imageUrl }}">
-            <h2>{{image.titre}}</h2>
-        </div>
-    </div>
-</div> -->
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UploadImageService } from '../../services/upload-image.service';
-import { UploadFilesComponent } from '../../models/upload-files/upload-files.component';
+import { UploadFiles } from 'src/app/models/upload-files';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { UploadFilesComponent } from '../../models/upload-files/upload-files.com
 })
 export class ImageUpComponent implements OnInit {
 
-images: UploadFilesComponent[] = [];
+images: UploadFiles[] = [];
 
   constructor(private UploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) {  }
 

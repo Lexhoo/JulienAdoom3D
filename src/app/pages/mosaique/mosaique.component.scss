@@ -1,36 +1,116 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.masonry {
+    background-color: black;
+    columns: 4;
+    column-gap: 21px;
+    @media (max-width: 1200px) {
+        columns: 3;
+    }
+    @media (max-width: 992px) {
+        columns: 1;
+    }
+    //@media (max-width: 768px) {columns: 1;}
+    .grid {
+        display: inline-block;
+        margin-bottom: 16px;
+        position: relative;
+        &:before {
+            border-radius: 5px;
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        &__title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0px 0px 10px 0px;
+        }
+        &__author {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        &__link {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        &__body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 30px 30px;
+            color: #fff;
+            display: flex;
+            flex-direction: column
+        }
+        &__tag {
+            background-color: green;
+            color: #333;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin-bottom: 5px;
+        }
+    }
 }
 
-a {
-    text-decoration: none;
+.mt-auto {
+    margin-top: auto;
 }
 
-.grid {
+.info {
     position: relative;
-    width: 90%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 12px;
-    grid-auto-flow: dense;
-    margin: 1% auto;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
 }
 
-.grid .img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
+h1 {
+    margin: 0px;
 }
 
-.grid::nth-child(1) {
-    grid-row: span 2;
+p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
 }
 
-.grid::nth-child(2) {
-    grid-column: span 2;
+button {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background: dodgerblue;
+    color: white;
+}
+
+.card {
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
 }
