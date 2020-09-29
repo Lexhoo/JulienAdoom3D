@@ -1,0 +1,116 @@
+.masonry {
+    background-color: black;
+    columns: 4;
+    column-gap: 21px;
+    @media (max-width: 1200px) {
+        columns: 3;
+    }
+    @media (max-width: 992px) {
+        columns: 1;
+    }
+    //@media (max-width: 768px) {columns: 1;}
+    .grid {
+        display: inline-block;
+        margin-bottom: 16px;
+        // position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        img {
+            width: 100%;
+        }
+        &__title {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0px 0px 10px 0px;
+        }
+        &__author {
+            font-size: 14px;
+            font-weight: 300;
+        }
+        &__link {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        &__body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 30px 30px;
+            color: #fff;
+            display: flex;
+            flex-direction: column
+        }
+        &__tag {
+            background-color: green;
+            color: #333;
+            padding: 5px 15px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+img:hover {
+    opacity: 0.95;
+}
+
+>.card {
+    display: block;
+    margin-bottom: 0;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+:hover>.card {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: grayscale(10%);
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.info {
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s;
+}
+
+h1 {
+    margin: 0px;
+}
+
+p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.card {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
