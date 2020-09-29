@@ -17,6 +17,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjetComponent } from './pages/projet/projet.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ProjetComponent } from './pages/projet/projet.component';
     VideoListComponent,
     ImageUpComponent,
     ProjetComponent,
+    FooterComponent,
 
 
 

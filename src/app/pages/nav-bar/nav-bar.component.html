@@ -1,53 +1,49 @@
-<header>
-    <div id="container1">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#"><img src="../../assets/mark-orange-large.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
+<div class="page">
+    <nav class="page__menu menu">
+        <ul class="menu__list r-list">
+            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">RandHome</a></li>
+            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Direction</a></li>
+            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Graphisme</a></li>
+            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Visual Effect</a></li>
+            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Conception</a></li>
+            <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Sketchbook</a></li>
+        </ul>
+    </nav>
+</div>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-lg-auto">
-                    <!-- <li class="nav-item active">
-                        <a class="nav-link" href="#container1">Home <span class="sr-only">(current)</span></a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a routerLink="/mosaique" routerLinkActive="active" class="nav-link">RandHome</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Direction</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Graphisme</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Visual Effect</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Conception 2D/3D</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sketchbook</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <!-- <div class="side-bar">
-        <div class="social-links">
-            <img src="../../../assets/fb.png">
-            <img src="../../../assets/ig.png">
-            <img src="../../../assets/tw.png">
-        </div>
-        <div class="useful-links">
-            <img src="../../../assets/share.png">
-            <img src="../../../assets/info.png">
-        </div>
-    </div> -->
+<nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+  </span>
+    <a href="#" class="logo">logo</a>
+    <ul class="main-nav" id="js-menu">
+        <li>
+            <a href="#" class="nav-links">RandHome</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Direction</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Graphisme</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Visual Effect</a>
+        </li>
+        <li>
+            <a href="#" class="nav-links">Conception</a>
+            <li>
+                <a href="#" class="nav-links">Sketchbook</a>
+            </li>
 
-</header>
-<!-- <div class="content">
-        <h2 class="flex-sm-fill text-sm-center nav-link">Welcome to</h2>
-        <h1 class="flex-sm-fill text-sm-center nav-link">Julien ADoom<br> fucking3D</h1>
-        <button type="button" class="buttonb">Take a tour</button>
-    </div> -->
+    </ul>
+</nav>
+
+<script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function() {
+
+        mainNav.classList.toggle('active');
+    });
+</script>
