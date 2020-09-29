@@ -14,18 +14,7 @@ export class MosaiqueComponent {
 
   _albums = [];
   constructor(private _lightbox: Lightbox, private uploadImageService: UploadImageService) {
-    // for (let i = 1; i <= 4; i++) {
-    //   const src = 'https://firebasestorage.googleapis.com/v0/b/julien3d-22327.appspot.com/o/Graphisme%2F2D%203D%2F07_cuisine_1.png?alt=media&token=b3d39401-7f1a-4dec-9153-9283e80e871d';
-    //   const caption = 'Image ' + i + ' caption here';
-    //   const thumb = 'https://firebasestorage.googleapis.com/v0/b/julien3d-22327.appspot.com/o/Graphisme%2F2D%203D%2F07_cuisine_1.png?alt=media&token=b3d39401-7f1a-4dec-9153-9283e80e871d';
-    //   const album = {
-    //      src: src,
-    //      caption: caption,
-    //      thumb: thumb
-    //   };
 
-    //   this._albums.push(album);
-    // }
   }
 
   open(index: number): void {
@@ -37,15 +26,6 @@ export class MosaiqueComponent {
     // close lightbox programmatically
     this._lightbox.close();
   }
-
-
-
-
-
-  // images: UploadFiles[] = [];
-
-  // constructor(private projetService: ProjetService, private uploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) {  }
-  // projetImage = null;
 
   ngOnInit(): void {
 

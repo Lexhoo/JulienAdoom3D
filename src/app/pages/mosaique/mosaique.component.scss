@@ -114,3 +114,17 @@ p {
     cursor: pointer;
     transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+button {
+    cursor: pointer;
+    position: relative;
+    margin-left: 49%;
+    margin-right: 37%;
+    background-color: transparent;
+    color: white;
+    border-radius: 31%;
+}
+
+button img {
+    width: 20%;
+}
