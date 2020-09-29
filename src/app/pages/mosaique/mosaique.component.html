@@ -1,5 +1,11 @@
 <div class="masonry">
-    <div class="grid" *ngFor="let image of images">
-        <a [routerLink]="['/../projet', image.idProjet]" class="card"> <img src="{{image.imageUrl}}"></a>
+    <div class="grid" *ngFor="let image of _albums; let i=index">
+        <img src="{{ image.thumb }}" (click)="open(i)" />
     </div>
 </div>
+
+<!-- <div *ngFor="let image of _albums; let i=index">
+    <img [src]="image.thumb" (click)="open(i)" />
+  </div> -->
+
+<!-- <a [routerLink]="['/../projet', image.idProjet]" class="card"> <img src="{{image.imageUrl}}"></a> -->

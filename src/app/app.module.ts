@@ -18,6 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjetComponent } from './pages/projet/projet.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FooterComponent } from './pages/footer/footer.component';
     MatToolbarModule,
     MatButtonModule,
     FlexLayoutModule,
+    LightboxModule
 
     ],
   providers: [],
