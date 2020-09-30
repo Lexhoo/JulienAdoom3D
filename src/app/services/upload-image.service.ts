@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { UploadFiles } from '../models/upload-files';
 
 const Url = 'http://localhost:8080/mosaique';
+const UrlIdImage = 'http://localhost:8080/upload/{idProjet}';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class UploadImageService {
 
   post(data): Observable<any> {
     return this.http.post(Url, data);
+  }
+
+  getImagesByIdProjet(): Observable<UploadFiles[]> {
+    return this.http.get<UploadFiles[]>(UrlIdImage);
   }
 }

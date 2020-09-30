@@ -16,6 +16,8 @@ export class ProjetComponent implements OnInit {
    idProjet: number;
    messageErreur: string;
    isErreur= false;
+   slideIndex = 0;
+numbImages : number;
 
   constructor(private router: Router, private projetService: ProjetService, private route: ActivatedRoute) {
   }
@@ -25,14 +27,18 @@ export class ProjetComponent implements OnInit {
     this.route.params.subscribe(params => {
       // this.idProjet = params.idProjet;
       this.recupererImagesParProjet(+params.idProjet);
+
     });
 
   }
+
+//
 
   private recupererImagesParProjet(idProjet: number) {
     this.projetService.getImagesByProjet(idProjet).subscribe({
       next: (images) => {
         this.images = images;
+this.numbImages = this.images.length;
       },
       error: (err) => {
         if (err.error.status === 404) {

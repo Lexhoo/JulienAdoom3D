@@ -1,6 +1,6 @@
 <div class="masonry">
-    <div class="grid" *ngFor="let image of _albums; let i=index">
-        <img src="{{ image.thumb }}" (click)="open(i)" />
-        <button><i class="material-icons">photo_library</i></button>
+    <div class="grid" *ngFor="let image of images; let i=index">
+        <img src="{{ image.imageUrl }}" (click)="open(image)" />
+        <button [routerLink]="['/../projet', image.idProjet]"><i class="material-icons">label_important</i></button>
     </div>
 </div>
