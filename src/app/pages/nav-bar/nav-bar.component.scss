@@ -15,9 +15,12 @@ header {
     padding: 5px 0;
     position: fixed;
     display: flex;
+    border: thick double #2d2c2c;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.navbar .navbar-expand-lg .navbar-light {
+.navbar .navbar-light {
     display: flex;
 }
 

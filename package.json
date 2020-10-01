@@ -26,6 +26,7 @@
     "@vimeo/player": "^2.13.0",
     "bootstrap": "^4.5.2",
     "bootstrap-4-grid": "^3.4.0",
+    "compass-mixins": "^0.12.10",
     "font-awesome": "^4.7.0",
     "gsap": "^3.5.1",
     "gulp": "^4.0.2",

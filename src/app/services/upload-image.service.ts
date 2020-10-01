@@ -5,7 +5,7 @@ import { UploadFiles } from '../models/upload-files';
 
 const Url = 'http://localhost:8080/mosaique';
 const UrlIdImage = 'http://localhost:8080/upload/{idProjet}';
-const UrlImgByCategorie = 'http://locahost:8080/categories/name/{name}';
+const UrlImgByCategorie = 'http://locahost:8080/categories/name/graphisme';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class UploadImageService {
     return this.http.get<UploadFiles[]>(UrlIdImage);
   }
 
-  getImagesByCategorie(categorie: string): Observable<UploadFiles[]> {
-    return this.http.get<UploadFiles[]>(UrlImgByCategorie)
+  getImagesByCategorie(): Observable<UploadFiles[]> {
+    return this.http.get<UploadFiles[]>(UrlImgByCategorie);
   }
 }

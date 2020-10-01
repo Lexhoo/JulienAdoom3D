@@ -23,7 +23,7 @@ export class CategoriePageComponent implements OnInit {
      }
 
   private recupererImagesParCategorie(categorie: string) {
-    this.uploadImageService.getImagesByCategorie(categorie).subscribe({
+    this.uploadImageService.getImagesByCategorie().subscribe({
       next: (imagesCategorie) => {
         this.imagesCategorie = imagesCategorie;
       },
