@@ -28,14 +28,11 @@ export class MosaiqueComponent {
           next: (images) => {
 
           this.images = images;
-
-
         },
         error: (err) => {
           if (err.error.status === 404) {
             console.log("Pas de fichiers trouvés");
           }
-          console.log("err", err);
         }});
       }
 

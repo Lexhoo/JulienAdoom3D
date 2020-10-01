@@ -9,4 +9,5 @@ export class ProjetModel {
   title: string;
   titre: string;
   idProjet:number;
+  idCategorie:number;
 }

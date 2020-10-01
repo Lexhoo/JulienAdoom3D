@@ -19,6 +19,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjetComponent } from './pages/projet/projet.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { LightboxModule } from 'ngx-lightbox';
+import { CategoriePageComponent } from './pages/categorie-page/categorie-page.component';
+import { GraphicComponent } from './pages/graphic/graphic.component';
+import { VisualEffectComponent } from './pages/visual-effect/visual-effect.component';
+import { DesignComponent } from './pages/design/design.component';
+import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { LightboxModule } from 'ngx-lightbox';
     ImageUpComponent,
     ProjetComponent,
     FooterComponent,
+    CategoriePageComponent,
+    GraphicComponent,
+    VisualEffectComponent,
+    DesignComponent,
+    SketchbookComponent,
 
 
 

@@ -8,4 +8,6 @@ export class UploadFiles {
   title: string;
   titre: string;
   idProjet:number;
+  idCategorie:number;
+
 }
