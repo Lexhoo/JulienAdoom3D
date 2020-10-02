@@ -1,5 +1,10 @@
-<p>graphic works!</p>
-<div *ngFor="let image of images">
-    <img src="{{image.imageUrl}}">
+<h1>GRAPHIC</h1>
 
-</div>
+<ul class="grid">
+    <li *ngFor="let image of images">
+        <figure class="grid__figure">
+            <img src="{{image.imageUrl}}" alt="">
+            <figcaption>{{image.titre}}</figcaption>
+        </figure>
+    </li>
+</ul>
