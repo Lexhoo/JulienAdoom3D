@@ -1,7 +1,8 @@
 .masonry {
     background-color: black;
     columns: 4;
-    column-gap: 21px;
+    column-gap: 27px;
+    padding-top: 90px;
     @media (max-width: 1200px) {
         columns: 3;
     }
@@ -12,9 +13,8 @@
     .grid {
         display: inline-block;
         margin-bottom: 16px;
-        // position: relative;
+        position: relative;
         &:before {
-            content: '';
             position: absolute;
             top: 0;
             right: 0;
@@ -23,6 +23,7 @@
         }
         img {
             width: 100%;
+            cursor: zoom-in;
         }
         &__title {
             font-size: 28px;
@@ -61,56 +62,21 @@
 }
 
 img:hover {
-    opacity: 0.95;
+    opacity: 0.75;
 }
 
->.card {
-    display: block;
-    margin-bottom: 0;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -ms-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-:hover>.card {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-    filter: grayscale(10%);
-}
-
-.mt-auto {
-    margin-top: auto;
-}
-
-.info {
-    position: relative;
-    z-index: 3;
-    color: white;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.5s;
-}
-
-h1 {
-    margin: 0px;
-}
-
-p {
-    letter-spacing: 1px;
-    font-size: 15px;
-    margin-top: 8px;
-}
-
-.card {
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    font-weight: bold;
+button {
     cursor: pointer;
-    transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: absolute;
+    background-color: transparent;
+    color: #d41d1d;
+    border-radius: 61%;
+    bottom: 0px;
+    right: 3px;
+    width: 9%;
+    height: 14%;
+}
+
+button img {
+    width: 20%;
 }

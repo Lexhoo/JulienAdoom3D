@@ -15,9 +15,12 @@ header {
     padding: 5px 0;
     position: fixed;
     display: flex;
+    border: thick double #2d2c2c;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.navbar .navbar-expand-lg .navbar-light {
+.navbar .navbar-light {
     display: flex;
 }
 
@@ -37,9 +40,26 @@ header {
 
 .navbar-light .navbar-nav .nav-item .nav-link:hover,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
-    background: rgba(0, 0, 0, 0.5);
-    color: rgb(236, 31, 31);
     font-family: 'Noto Sans', sans-serif;
+    background: #ec0b36 url(../../../assets/pixel.png);
+    transition-delay: 0.5s;
+    animation: animate 0.8s steps(8) forwards;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:nth-child(2):hover {
+    background: #730bec url(../../../assets/pixel2.png);
+    transition-delay: 0.8;
+    background-size: 180px;
+    animation: animate 0.8s steps(8) forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y: -480px;
+    }
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
@@ -56,14 +76,18 @@ header {
 
 .navbar-light .navbar-toggler {
     color: #fff;
-    border: 3px solid #f10000;
-    border-radius: 5;
+    border: 1px solid #f10000;
     outline: none;
     margin-left: 82%;
-    background-color: #f9a202;
+    background-color: #d81e00;
     position: fixed;
     margin-top: -6px;
     right: 22px;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: #fff;
 }
 
 .navabar-collapse {
