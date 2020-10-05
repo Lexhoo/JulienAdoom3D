@@ -40,9 +40,26 @@ header {
 
 .navbar-light .navbar-nav .nav-item .nav-link:hover,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
-    background: rgba(88, 183, 246, 0.5);
-    color: rgb(236, 31, 31);
     font-family: 'Noto Sans', sans-serif;
+    background: #ec0b36 url(../../../assets/pixel.png);
+    transition-delay: 0.5s;
+    animation: animate 0.8s steps(8) forwards;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:nth-child(2):hover {
+    background: #730bec url(../../../assets/pixel2.png);
+    transition-delay: 0.8;
+    background-size: 180px;
+    animation: animate 0.8s steps(8) forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y: -480px;
+    }
 }
 
 .navbar-light .navbar-nav .nav-item .nav-link {
@@ -66,6 +83,11 @@ header {
     position: fixed;
     margin-top: -6px;
     right: 22px;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: #fff;
 }
 
 .navabar-collapse {

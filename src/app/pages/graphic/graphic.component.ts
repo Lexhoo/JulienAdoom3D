@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { param } from 'jquery';
 import { UploadFiles } from 'src/app/models/upload-files';
 import { ProjetService } from 'src/app/services/projet.service';
 import { UploadImageService } from 'src/app/services/upload-image.service';
@@ -10,32 +11,30 @@ import { UploadImageService } from 'src/app/services/upload-image.service';
   styleUrls: ['./graphic.component.scss']
 })
 export class GraphicComponent implements OnInit {
-  images: UploadFiles[] = [];
-  idProjet: number;
+  imgCat: UploadFiles[] = [];
+  idCategorie: number;
   messageErreur: string;
   isErreur= false;
   slideIndex = 0;
   numbImages : number;
 
-  constructor(private projetService: ProjetService, private uploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) { }
+
+  constructor(private uploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-   /**
-     * Récupération d'une liste d'images. Une image random par projet
-     */
-    this.uploadImageService.getAll().subscribe({
-      next: (images) => {
-
-      this.images = images;
-    },
-    error: (err) => {
+   this.uploadImageService.getImagesByIdCategorie(2).subscribe({
+     next: (imgCat) => {
+       this.imgCat = imgCat;
+     },
+     error: (err) => {
       if (err.error.status === 404) {
         console.log("Pas de fichiers trouvés");
       }
-    }});
+     }});
+  }
   }
 
-  }
+
 
 

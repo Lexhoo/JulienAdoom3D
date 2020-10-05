@@ -1,1 +1,14 @@
-<p>categorie-page works!</p>
+<h1>{{titre}}</h1>
+
+<ul class="grid">
+    <li *ngFor="let image of imgCat">
+        <figure class="grid__figure">
+            <img src="{{image.imageUrl}}" alt="">
+            <figcaption>{{image.titre}}</figcaption>
+        </figure>
+    </li>
+</ul>
+<div [@routeAnimations]="o && o.activatedRouteData
+&& o.activatedRouteData['animation']">
+    <router-outlet #o="outlet"></router-outlet>
+</div>

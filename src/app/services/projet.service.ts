@@ -9,15 +9,15 @@ import { UploadFiles } from '../models/upload-files';
   providedIn: 'root'
 })
 export class ProjetService {
-  UrlProjet = 'http://localhost:8080/upload/';
+  urlProjet = 'http://localhost:8080/upload/';
 
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {
-    return this.http.get<ProjetModel>(this.UrlProjet + 'all');
+    return this.http.get<ProjetModel>(this.urlProjet + 'all');
   }
 
   getImagesByProjet(idProjet: number): Observable<UploadFiles[]> {
-    return this.http.get<UploadFiles[]>(this.UrlProjet + idProjet);
+    return this.http.get<UploadFiles[]>(this.urlProjet + idProjet);
   }
 }

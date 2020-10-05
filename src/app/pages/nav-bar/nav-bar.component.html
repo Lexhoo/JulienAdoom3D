@@ -10,19 +10,22 @@
                 <ul class="navbar-nav ml-lg-auto">
 
                     <li class="nav-item ">
-                        <a routerLink="mosaique" routerLinkActive="active" class="nav-link">RandHome</a>
+                        <a routerLink="/mosaique" routerLinkActive="active" class="nav-link">RandHome</a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="graphic" routerLinkActive="active" class="nav-link" href="#">Graphic</a>
+                        <a [routerLink]="['categorie', '1','DIRECTION']" routerLinkActive="active" class="nav-link" href="#">Direction</a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="visualeffect" routerLinkActive="active" class="nav-link" class="nav-link" href="#">Visual Effect</a>
+                        <a [routerLink]="['categorie', '2','GRAPHIC']" routerLinkActive="active" class="nav-link" href="#">Graphic</a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="design" routerLinkActive="active" class="nav-link" class="nav-link" href="#">2D/3D Design</a>
+                        <a [routerLink]="['categorie', '5','VISUAL EFFECT']" routerLinkActive="active" class="nav-link" class="nav-link" href="#">Visual Effect</a>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a [routerLink]="['categorie', '6','CONCEPTION 2D/3D']" routerLinkActive="active" class="nav-link" class="nav-link" href="#">2D/3D Design</a>
+                    </li> -->
                     <li class="nav-item">
-                        <a routerLink="sketchbook" routerLinkActive="active" class="nav-link" class="nav-link" href="#">Sketchbook</a>
+                        <a [routerLink]="['categorie', '4','SKETCHBOOK']" routerLinkActive="active" class="nav-link" class="nav-link" href="#">Sketchbook</a>
                     </li>
                 </ul>
             </div>

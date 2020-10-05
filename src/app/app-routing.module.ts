@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'home', component: HomeComponent , data: {animation: 'Home'} },
   { path: 'mosaique', component: MosaiqueComponent , data: {animation: 'RandHome'} },
+  { path: 'categorie/:id/:titre', component: CategoriePageComponent , data: {animation: 'Graphic'} },
   { path: 'graphic', component: GraphicComponent , data: {animation: 'Graphic'} },
   { path: 'visualeffect', component: VisualEffectComponent , data: {animation: 'VisualEffect'} },
   { path: 'design', component: DesignComponent , data: {animation: 'Design'} },

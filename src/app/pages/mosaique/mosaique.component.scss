@@ -2,6 +2,7 @@
     background-color: black;
     columns: 4;
     column-gap: 27px;
+    padding-top: 90px;
     @media (max-width: 1200px) {
         columns: 3;
     }
