@@ -27,6 +27,7 @@ ul {
 
 figure {
     margin: 0;
+    position: relative;
 }
 
 figcaption {
@@ -48,7 +49,7 @@ figcaption {
     -webkit-overflow-scrolling: touch; // better scrolling on touch
     padding: 2em 1em;
     background: rgb(0, 0, 0);
-    @media all and (min-width: 600px) {
+    @media all and (min-width: 768px) {
         grid-auto-flow: initial; // default: display items in rows and cols
         grid-template-columns: repeat(auto-fit, minmax(auto, 42em)); // as many columns with max-width of 20em;
         justify-content: center; // center the items - this is optional
@@ -57,7 +58,7 @@ figcaption {
     }
     &__figure {
         display: grid;
-        grid-template-rows: 15em 1fr; // 15em high row for image – value could be whatever
+        grid-template-rows: 39em 1fr; // 15em high row for image – value could be whatever
         grid-gap: 1em;
         img {
             width: 100%;
@@ -66,3 +67,21 @@ figcaption {
         }
     }
 }
+
+.grid__figure figcaption {
+    z-index: 3;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    position: absolute;
+    color: red;
+}
+
+// .grid__figure figcaption:hover {
+//     z-index: 3;
+//     opacity: 1;
+//     display: block;
+//     width: 100%;
+//     position: absolute;
+//     color: red;
+// }
