@@ -10,7 +10,7 @@ import { UploadFiles } from '../models/upload-files';
 })
 export class ProjetService {
   urlProjet = 'http://localhost:8080/upload/';
-  // urlIdProjetAndIdCategorie = 'http://localhost:8080/upload/projetcategorie';
+  urlIdProjetAndIdCategorie = 'http://localhost:8080/upload/projetcategorie';
   urlgetImagesCategorieByProjet = 'http://localhost:8080/mosaique/categorie/';
 
   constructor(private http: HttpClient) { }
@@ -22,9 +22,9 @@ export class ProjetService {
   getImagesByProjet(idProjet: number): Observable<UploadFiles[]> {
     return this.http.get<UploadFiles[]>(this.urlProjet + idProjet);
   }
-//   findByIdProjetAndIdCategorie(idProjet: number, idCategorie: number): Observable<UploadFiles[]> {
-//   return this.http.get<UploadFiles[]>(this.urlIdProjetAndIdCategorie + idProjet + idCategorie);
-// }
+  findByIdProjetAndIdCategorie(idProjet: number, idCategorie: number): Observable<UploadFiles[]> {
+  return this.http.get<UploadFiles[]>(this.urlIdProjetAndIdCategorie + idProjet + idCategorie);
+}
 getImagesCategorieByProjet(idCategorie: number): Observable<UploadFiles[]> {
   return this.http.get<UploadFiles[]>(this.urlgetImagesCategorieByProjet + idCategorie);
 }

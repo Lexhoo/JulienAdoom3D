@@ -1,29 +1,23 @@
-<div *ngIf="isErreur" class="error">
-    <h1>{{ messageErreur }}</h1>
-</div>
-
-<div *ngIf="!isErreur">
-    <div class="carrou">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="2000" *ngFor="let image of images let i = index" [ngClass]="{'active': i == 0 }">
-                    <img src="{{ image.imageUrl}}" class="d-block w-100">
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
+<!-- <li class="pusher"></li>
+<li>
+    <div *ngFor="let image of images">
+        <img src="{{image.imageUrl}}">
+        <h1>This is a title</h1>
+        <p>Some sample text about the article this hexagon leads to</p>
     </div>
+</li>
+<li>
+    <div> -->
+
+
+<ul id="hexGrid">
+    <li class="hex" *ngFor="let image of images">
+        <div class="hexIn">
+            <a class="hexLink" href="#">
+                <img src="{{image.imageUrl}}" alt="" />
+                <h1>This is a title</h1>
+                <p>Some sample text about the article this hexagon leads to</p>
+            </a>
+        </div>
+    </li>
+</ul>

@@ -23,6 +23,7 @@ import { CategoriePageComponent } from './pages/categorie-page/categorie-page.co
 import { VisualEffectComponent } from './pages/visual-effect/visual-effect.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
     MatToolbarModule,
     MatButtonModule,
     FlexLayoutModule,
-    LightboxModule
+    LightboxModule,
+    NgbModule
 
     ],
   providers: [],

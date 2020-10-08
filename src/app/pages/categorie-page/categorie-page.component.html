@@ -1,15 +1,16 @@
-<h1>{{titre}}</h1>
+<div class="masonry">
+    <h1>Projects</h1>
+    <div class="grid" *ngFor="let image of imgCat">
+        <div class="box">
+            <img src="{{image.imageUrl}}" class="rounded" alt="" (click)="onClick(image.idProjet)">
+            <div class="box-content">
+                <h3 class="title">{{image.titre}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
 
-<ul class="grid">
-    <li *ngFor="let image of imgCat">
-        <figure class="grid__figure">
-            <img src="{{image.imageUrl}}" alt="">
-            <figcaption>{{image.titre}}</figcaption>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </figure>
-    </li>
-</ul>
 <div [@routeAnimations]="o && o.activatedRouteData
-&& o.activatedRouteData['animation']">
+              && o.activatedRouteData['animation']">
     <router-outlet #o="outlet"></router-outlet>
 </div>

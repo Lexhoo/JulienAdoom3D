@@ -36,5 +36,8 @@ export class CategoriePageComponent implements OnInit {
         }});
     });
   }
+onClick(id: number){
+  this.router.navigate(['projet', {idProjet: id}]);
 
+}
 }

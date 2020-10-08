@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'visualeffect', component: VisualEffectComponent , data: {animation: 'VisualEffect'} },
   { path: 'design', component: DesignComponent , data: {animation: 'Design'} },
   { path: 'sketchbook', component: SketchbookComponent , data: {animation: 'Sketchbook'} },
+  { path: 'projet', component: ProjetComponent , data: {animation: 'Projet'} },
 
 ];
 
