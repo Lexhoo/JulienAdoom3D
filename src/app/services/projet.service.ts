@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ProjetModel } from '../models/projet-model';
 import { UploadFiles } from '../models/upload-files';
 
+const httpOptions = {
+  headers: new HttpHeaders({ "Content-Type": "application/json" })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +30,12 @@ export class ProjetService {
 }
 getImagesCategorieByProjet(idCategorie: number): Observable<UploadFiles[]> {
   return this.http.get<UploadFiles[]>(this.urlgetImagesCategorieByProjet + idCategorie);
+}
+
+getImages() {
+  return this.http.get(
+    "https://accedo-video-app-api.herokuapp.com/getImages",
+    httpOptions
+  );
 }
 }

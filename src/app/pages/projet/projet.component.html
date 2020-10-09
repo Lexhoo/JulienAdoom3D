@@ -1,21 +1,33 @@
-<!-- <li class="pusher"></li>
-<li>
-    <div *ngFor="let image of images">
-        <img src="{{image.imageUrl}}">
-        <h1>This is a title</h1>
-        <p>Some sample text about the article this hexagon leads to</p>
+<div class="row">
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
     </div>
-</li>
-<li>
-    <div> -->
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card card-inverse card-primary text-center">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card card-inverse card-primary text-center">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card card-inverse card-primary text-center">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
+    </div>
 
+</div>
 
 <ul id="hexGrid">
     <li class="hex" *ngFor="let image of images">
         <div class="hexIn">
-            <a class="hexLink" href="#">
+            <a class="hexLink" (click)="open(image)">
                 <img src="{{image.imageUrl}}" alt="" />
-                <h1>This is a title</h1>
+                <h1>{{image.titre}}</h1>
                 <p>Some sample text about the article this hexagon leads to</p>
             </a>
         </div>

@@ -4,7 +4,7 @@
 }
 
 body {
-    background: rgb(123, 158, 158);
+    background: rgb(202, 236, 7);
 }
 
 #hexGrid {
@@ -86,7 +86,7 @@ body {
     width: 100%;
     padding: 5%;
     box-sizing: border-box;
-    background-color: rgba(0, 128, 128, 0.8);
+    background-color: rgba(63 81 181 / 0.5);
     font-weight: 300;
     -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
     transition: transform .2s ease-out, opacity .3s ease-out;
@@ -138,7 +138,7 @@ body {
 @media (min-width:1201px) {
     /* <- 5-4  hexagons per row */
     #hexGrid {
-        padding-bottom: 4.4%
+        padding-bottom: 33.4%
     }
     .hex {
         width: 20%;

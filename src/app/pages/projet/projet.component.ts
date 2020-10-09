@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProjetService } from '../../services/projet.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { UploadFiles } from 'src/app/models/upload-files';
+import { Lightbox } from 'ngx-lightbox';
 
 
 
@@ -17,8 +18,10 @@ messageErreur: string;
 isErreur= false;
 slideIndex = 0;
 numbImages : number;
+imagesParProjet: UploadFiles[] = [];
+_albums: any;
 
-  constructor(private router: Router, private projetService: ProjetService, private route: ActivatedRoute) {
+  constructor(private _lightbox: Lightbox, private router: Router, private projetService: ProjetService, private route: ActivatedRoute) {
   }
 
 
@@ -35,5 +38,40 @@ numbImages : number;
        }
       }});
     });
+  }
+  open(image: UploadFiles): void {
+    this.projetService.getImagesByProjet(image.idProjet).subscribe({
+      next: (imagesParProjet) => {
+        this._albums = [];
+      this.imagesParProjet = imagesParProjet;
+      for (let i = 0; i < imagesParProjet.length; i++) {
+        const src = imagesParProjet[i].imageUrl;
+        const idProjet = imagesParProjet[i].idProjet
+        const caption = imagesParProjet[i].titre;
+        const thumb = imagesParProjet[i].imageUrl;
+        const album = {
+           src: src,
+           caption: caption,
+           thumb: thumb,
+           idProjet: idProjet
+        };
+        this._albums.push(album);
+    }
+    // const imageFilter = this._albums.filter( img => image.id === img.id);
+    // const index = this._albums.indexOf(imageFilter);
+   // open lightbox
+   this._lightbox.open(this._albums, 1);},
+    error: (err) => {
+      if (err.error.status === 404) {
+        console.log("Pas de fichiers trouvés");
+      }
+      console.log("err", err);
+    }});
+  }
+
+  close(): void {
+    // close lightbox programmatically
+
+    this._lightbox.close();
   }
   }

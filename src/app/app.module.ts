@@ -24,6 +24,7 @@ import { VisualEffectComponent } from './pages/visual-effect/visual-effect.compo
 import { DesignComponent } from './pages/design/design.component';
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatButtonModule,
     FlexLayoutModule,
     LightboxModule,
-    NgbModule
+    NgbModule,
+    NgImageSliderModule
+
 
     ],
   providers: [],

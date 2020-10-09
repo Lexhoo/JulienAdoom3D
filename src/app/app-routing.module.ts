@@ -7,6 +7,7 @@ import { CategoriePageComponent } from './pages/categorie-page/categorie-page.co
 import { VisualEffectComponent } from './pages/visual-effect/visual-effect.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
+import { FirstComponent } from './first/first.component';
 
 const routes: Routes = [
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'design', component: DesignComponent , data: {animation: 'Design'} },
   { path: 'sketchbook', component: SketchbookComponent , data: {animation: 'Sketchbook'} },
   { path: 'projet', component: ProjetComponent , data: {animation: 'Projet'} },
+  { path: 'first', component: FirstComponent , data: {animation: 'First'} },
 
 ];
 
