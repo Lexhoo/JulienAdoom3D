@@ -1,29 +1,35 @@
-<div *ngIf="isErreur" class="error">
-    <h1>{{ messageErreur }}</h1>
-</div>
-
-<div *ngIf="!isErreur">
-    <div class="carrou">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="2000" *ngFor="let image of images let i = index" [ngClass]="{'active': i == 0 }">
-                    <img src="{{ image.imageUrl}}" class="d-block w-100">
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
+<div class="row">
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
         </div>
     </div>
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card card-inverse card-primary text-center">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card card-inverse card-primary text-center">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="col-lg 3 col-md-3 col-sm-12 col-xs-12">
+        <div class="card card-inverse card-primary text-center">
+            <iframe class="rounded" type="text/html" src="https://player.vimeo.com/video/293402906?quality=1080&title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;player_id=player1" width="256" height="144" frameborder="0"></iframe>
+        </div>
+    </div>
+
+</div>
+
+<ul id="hexGrid">
+    <li class="hex" *ngFor="let image of images">
+        <div class="hexIn">
+            <a class="hexLink" (click)="open(image)">
+                <img src="{{image.imageUrl}}" alt="" />
+                <h1>{{image.titre}}</h1>
+                <p>Some sample text about the article this hexagon leads to</p>
+            </a>
+        </div>
+    </li>
+</ul>

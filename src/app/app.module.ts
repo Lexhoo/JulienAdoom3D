@@ -20,10 +20,11 @@ import { ProjetComponent } from './pages/projet/projet.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { CategoriePageComponent } from './pages/categorie-page/categorie-page.component';
-import { GraphicComponent } from './pages/graphic/graphic.component';
 import { VisualEffectComponent } from './pages/visual-effect/visual-effect.component';
 import { DesignComponent } from './pages/design/design.component';
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,6 @@ import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
     ProjetComponent,
     FooterComponent,
     CategoriePageComponent,
-    GraphicComponent,
     VisualEffectComponent,
     DesignComponent,
     SketchbookComponent,
@@ -56,7 +56,10 @@ import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
     MatToolbarModule,
     MatButtonModule,
     FlexLayoutModule,
-    LightboxModule
+    LightboxModule,
+    NgbModule,
+    NgImageSliderModule
+
 
     ],
   providers: [],

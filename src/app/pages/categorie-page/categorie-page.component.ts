@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UploadImageService } from 'src/app/services/upload-image.service';
 import { UploadFiles } from '../../models/upload-files';
 import { slideInAnimation } from '../../route-animation';
+import { Lightbox } from 'ngx-lightbox';
+import { ProjetService } from '../../services/projet.service';
 
 @Component({
   selector: 'app-categorie-page',
@@ -17,13 +19,13 @@ export class CategoriePageComponent implements OnInit {
   titre: string;
 
 
-  constructor(private uploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private projetService: ProjetService, private uploadImageService: UploadImageService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
     this.route.params.subscribe(params => {
       this.titre = params.titre;
-      this.uploadImageService.getImagesByIdCategorie(+params.id).subscribe({
+      this.projetService.getImagesCategorieByProjet(+params.id).subscribe({
         next: (imgCat) => {
           this.imgCat = imgCat;
         },
@@ -31,10 +33,11 @@ export class CategoriePageComponent implements OnInit {
          if (err.error.status === 404) {
            console.log("Pas de fichiers trouvés");
          }
-        }});;
-
+        }});
     });
-
-
   }
+onClick(id: number){
+  this.router.navigate(['projet', {idProjet: id}]);
+
+}
 }

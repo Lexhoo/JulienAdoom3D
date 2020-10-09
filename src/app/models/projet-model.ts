@@ -10,4 +10,5 @@ export class ProjetModel {
   titre: string;
   idProjet:number;
   idCategorie:number;
+  projetName:string;
 }

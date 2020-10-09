@@ -9,5 +9,5 @@ export class UploadFiles {
   titre: string;
   idProjet:number;
   idCategorie:number;
-
+  projetName:string;
 }
