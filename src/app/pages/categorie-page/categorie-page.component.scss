@@ -1,3 +1,7 @@
+* {
+    background-color: black;
+}
+
 h1 {
     text-align: center;
     text-decoration: solid red;
@@ -24,7 +28,7 @@ h1 {
 }
 
 .masonry {
-    background-image: linear-gradient(to right, #ffffff, #cec5f6, #9f8de9, #6c55d9, #2617c6);
+    background-color: black;
     columns: 3;
     column-gap: 27px;
     padding-top: 120px;

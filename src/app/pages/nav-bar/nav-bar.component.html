@@ -1,4 +1,26 @@
-<header>
+<body>
+
+    <nav class="navbar navbar-dark navbar-expand-lg">
+        <div claas="container">
+            <a routerLink="home" routerLinkActive="active" class="navbar-brand"><img src="../../assets/logo.png"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a routerLink="/mosaique" routerLinkActive="active" class="nav-link">RandHome</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '1','DIRECTION']" routerLinkActive="active" class="nav-link" href="">Direction</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '2','GRAPHIC']" routerLinkActive="active" class="nav-link" href="">Graphic</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '5','VISUAL EFFECT']" routerLinkActive="active" class="nav-link" class="nav-link" href="">Visual Effect</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '4','SKETCHBOOK']" routerLinkActive="active" class="nav-link" class="nav-link" href="">Sketchbook</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+
+<!-- <header>
     <div id="container1">
         <nav class="navbar navbar-expand-lg navbar-light">
             <a routerLink="home" routerLinkActive="active" class="navbar-brand"><img src="../../assets/mark-orange-large.png"></a>
@@ -21,17 +43,14 @@
                     <li class="nav-item">
                         <a [routerLink]="['categorie', '5','VISUAL EFFECT']" routerLinkActive="active" class="nav-link" class="nav-link" href="#">Visual Effect</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a [routerLink]="['categorie', '6','CONCEPTION 2D/3D']" routerLinkActive="active" class="nav-link" class="nav-link" href="#">2D/3D Design</a>
-                    </li> -->
-                    <li class="nav-item">
+                                       <li class="nav-item">
                         <a [routerLink]="['categorie', '4','SKETCHBOOK']" routerLinkActive="active" class="nav-link" class="nav-link" href="#">Sketchbook</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
-</header>
+</header> -->
 <div [@routeAnimations]="o && o.activatedRouteData
 && o.activatedRouteData['animation']">
     <router-outlet #o="outlet"></router-outlet>
