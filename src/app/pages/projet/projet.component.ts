@@ -45,7 +45,16 @@ _albums: any;
         this._albums = [];
       this.imagesParProjet = imagesParProjet;
       for (let i = 0; i < imagesParProjet.length; i++) {
-        const src = imagesParProjet[i].imageUrl;
+        let src
+        /**
+         * S'il y a une vidéo associée, on l'affiche à la place
+         * de l'image dans la popin.
+         */
+        if(imagesParProjet[i].hasVideo) {
+          src = imagesParProjet[i].videoUrl;
+        } else {
+          src = imagesParProjet[i].imageUrl;
+        }
         const idProjet = imagesParProjet[i].idProjet
         const caption = imagesParProjet[i].titre;
         const thumb = imagesParProjet[i].imageUrl;

@@ -25,6 +25,7 @@ import { DesignComponent } from './pages/design/design.component';
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     VisualEffectComponent,
     DesignComponent,
     SketchbookComponent,
+    ContactComponent,
 
 
 
