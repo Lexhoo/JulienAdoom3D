@@ -1,6 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 .clients img {
     width: 100%;
     border-radius: 50%;
+}
+
+.clients img:hover {
+    transform: rotate(1080deg);
+    border-radius: 50%;
+    transition: all 2s;
+    /* transition when the mouse over */
 }
 
 h3 {
@@ -25,6 +36,18 @@ blockquote {
     margin-top: 12%;
     font-size: larger;
     font-style: oblique;
+}
+
+.fab {
+    width: 11%;
+}
+
+.fa-facebook-square {
+    color: blue;
+}
+
+.fa-instagram {
+    color: red;
 }
 
 .clients-hr {
@@ -62,6 +85,7 @@ footer svg.svg-inline--fa:hover {
 hr.socket {
     width: 100%;
     border-top: .2rem solid red;
+    margin-top: 3rem;
 }
 
 @media (max-width: 767px) {
@@ -73,4 +97,8 @@ hr.socket {
     blockquote {
         font-size: small;
     }
+}
+
+.justify-content-center {
+    margin: 0;
 }
