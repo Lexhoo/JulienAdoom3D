@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Email } from 'src/app/models/email';
+import { EmailService } from 'src/app/services/email.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
+  mail :Email = new Email();
+
+  constructor(private http: HttpClient, private emailService :EmailService) { }
+
+  public envoiEmail() {
+    this.emailService.envoiEmail(this.mail)
+      .subscribe(data => console.log(data));
+  }
+
+  public onSubmit() {
+    this.envoiEmail();
+  }
+
 
 }
+
+

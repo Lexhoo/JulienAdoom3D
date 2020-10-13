@@ -21,7 +21,6 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { CategoriePageComponent } from './pages/categorie-page/categorie-page.component';
 import { VisualEffectComponent } from './pages/visual-effect/visual-effect.component';
-import { DesignComponent } from './pages/design/design.component';
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgImageSliderModule } from 'ng-image-slider';
@@ -40,7 +39,6 @@ import { ContactComponent } from './pages/contact/contact.component';
     FooterComponent,
     CategoriePageComponent,
     VisualEffectComponent,
-    DesignComponent,
     SketchbookComponent,
     ContactComponent,
 
