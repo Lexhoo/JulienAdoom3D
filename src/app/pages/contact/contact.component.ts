@@ -17,8 +17,14 @@ export class ContactComponent implements OnInit {
   constructor(private http: HttpClient, private emailService :EmailService) { }
 
   public envoiEmail() {
-    this.emailService.envoiEmail(this.mail)
-      .subscribe(data => console.log(data));
+    this.emailService.envoiEmail(this.mail).subscribe({
+        next: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.log("une erreur s'est produite lors de l'envoi du mail.");
+      }
+    });
   }
 
   public onSubmit() {

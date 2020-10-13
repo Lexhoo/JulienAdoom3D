@@ -1,8 +1,8 @@
 export class Email {
 
-  nom:number;
+  nom:string;
   email:Email;
   message:string;
-  compagny:string
-  phone:number
+  compagny:string;
+  phone:string;
 }

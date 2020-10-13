@@ -10,11 +10,11 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a routerLink="/mosaique" routerLinkActive="active" class="nav-link">RandHome</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '1','DIRECTION']" routerLinkActive="active" class="nav-link" href="">Direction</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '2','GRAPHIC']" routerLinkActive="active" class="nav-link" href="">Graphic</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '5','VISUAL EFFECT']" routerLinkActive="active" class="nav-link" class="nav-link" href="">Visual Effect</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '4','SKETCHBOOK']" routerLinkActive="active" class="nav-link" class="nav-link" href="">Sketchbook</a></li>
+                <li class="nav-item"><a routerLink="/mosaique" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">RandHome</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '1','DIRECTION']" class="nav-link" routerLinkActive="active">Direction</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '2','GRAPHIC']" class="nav-link" routerLinkActive="active">Graphic</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '5','VISUAL EFFECT']" class="nav-link" routerLinkActive="active">Visual Effect</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '4','SKETCHBOOK']" class="nav-link" routerLinkActive="active">Sketchbook</a></li>
             </ul>
         </div>
     </nav>
