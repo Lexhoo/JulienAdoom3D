@@ -9,6 +9,7 @@ import { EmailService } from 'src/app/services/email.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+alert:boolean=false;
 
   ngOnInit(): void {
   }
@@ -29,6 +30,11 @@ export class ContactComponent implements OnInit {
 
   public onSubmit() {
     this.envoiEmail();
+    this.alert=true
+
+  }
+  closeAlert(){
+    this.alert=false
   }
 
 

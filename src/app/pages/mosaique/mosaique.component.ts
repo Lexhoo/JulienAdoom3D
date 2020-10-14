@@ -46,18 +46,20 @@ export class MosaiqueComponent {
         const idProjet = imagesParProjet[i].idProjet
         const caption = imagesParProjet[i].titre;
         const thumb = imagesParProjet[i].imageUrl;
+        const id = imagesParProjet[i].id;
         const album = {
            src: src,
            caption: caption,
            thumb: thumb,
-           idProjet: idProjet
+           idProjet: idProjet,
+           idImage: id
         };
         this._albums.push(album);
     }
-    // const imageFilter = this._albums.filter( img => image.id === img.id);
-    // const index = this._albums.indexOf(imageFilter);
+    const imageFilter = this._albums.find( img => image.id === img.idImage);
+    const index = this._albums.indexOf(imageFilter);
    // open lightbox
-   this._lightbox.open(this._albums, 0);},
+   this._lightbox.open(this._albums, index);},
     error: (err) => {
       if (err.error.status === 404) {
         console.log("Pas de fichiers trouvés");
@@ -65,6 +67,7 @@ export class MosaiqueComponent {
       console.log("err", err);
     }});
   }
+
 
   close(): void {
     // close lightbox programmatically

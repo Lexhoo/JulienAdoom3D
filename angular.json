@@ -38,7 +38,8 @@
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",
                             "src/assets/jsFolder/lightlight.js",
-                            "node_modules/@fortawesome/fontawesome-free/css/all.css"
+                            "node_modules/@fortawesome/fontawesome-free/css/all.css",
+                            "src/assets/jsFolder/video.js"
 
                         ]
                     },
