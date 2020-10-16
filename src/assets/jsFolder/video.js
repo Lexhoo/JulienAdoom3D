@@ -14,10 +14,8 @@ function mytest() {
 
 
 
-$scope.playVideo = function() {
-    // ...
-    $scope.hasOverlayBeenClicked = true;
-}
-
-
-$('#video-gallery').lightGallery();
+$(document).ready(() => {
+    $("#lightgallery").lightGallery({
+        pager: true
+    });
+});

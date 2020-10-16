@@ -10,6 +10,7 @@ import { EmailService } from 'src/app/services/email.service';
 })
 export class ContactComponent implements OnInit {
 alert:boolean=false;
+  submitted: boolean;
 
   ngOnInit(): void {
   }
@@ -30,8 +31,7 @@ alert:boolean=false;
 
   public onSubmit() {
     this.envoiEmail();
-    this.alert=true
-
+    this.submitted = true;
   }
   closeAlert(){
     this.alert=false

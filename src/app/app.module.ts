@@ -58,7 +58,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     FlexLayoutModule,
     LightboxModule,
     NgbModule,
-    NgImageSliderModule,
+    NgImageSliderModule
 
 
     ],

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-video-list',
@@ -6,18 +7,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent  {
-video:any;
-btn: any;
+  constructor() {  }
 
+  ngOnInit(): void {
 
-    // Pause and play the video, and change the button text
-    myFunction() {
-        if (this.video.paused) {
-            this.video.play();
-            this.btn.innerHTML = "Pause";
-        } else {
-            this.video.pause();
-            this.btn.innerHTML = "Play";
-        }
-    }
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+          rotate: 30,
+          stretch: 0,
+          depth: 300,
+          modifier: 1,
+          slideShadows: true,
+      },
+      pagination: {
+          el: '.swiper-pagination',
+      },
+  });
+  }
+
 }
+
+

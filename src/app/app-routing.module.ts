@@ -8,6 +8,7 @@ import { VisualEffectComponent } from './pages/visual-effect/visual-effect.compo
 import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 import { FirstComponent } from './first/first.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { VideoListComponent } from './pages/video-list/video-list.component';
 
 const routes: Routes = [
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'projet', component: ProjetComponent , data: {animation: 'Projet'} },
   { path: 'first', component: FirstComponent , data: {animation: 'First'} },
   { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} },
+  { path: 'videolist', component: VideoListComponent , data: {animation: 'VideoList'} },
 
 ];
 
