@@ -9,6 +9,7 @@ import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 import { FirstComponent } from './first/first.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoListComponent } from './pages/video-list/video-list.component';
+import { VideoProjectComponent } from './pages/video-project/video-project.component';
 
 const routes: Routes = [
 
@@ -22,6 +23,8 @@ const routes: Routes = [
   { path: 'first', component: FirstComponent , data: {animation: 'First'} },
   { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} },
   { path: 'videolist', component: VideoListComponent , data: {animation: 'VideoList'} },
+  { path: 'videoproject', component: VideoProjectComponent , data: {animation: 'VideoProject'} },
+
 
 ];
 

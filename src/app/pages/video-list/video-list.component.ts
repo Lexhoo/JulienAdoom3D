@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import Swiper from 'swiper';
+import { Component, Host, OnInit, Sanitizer } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UploadFiles } from 'src/app/models/upload-files';
+import { ProjetService } from '../../services/projet.service';
 
 @Component({
   selector: 'app-video-list',
@@ -7,28 +10,31 @@ import Swiper from 'swiper';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent  {
-  constructor() {  }
+  images: UploadFiles[] = [];
+
+  constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {  }
 
   ngOnInit(): void {
 
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-          rotate: 30,
-          stretch: 0,
-          depth: 300,
-          modifier: 1,
-          slideShadows: true,
+    this.projetService.getImagesVideos().subscribe({
+      next: (images) => {
+
+        this.images = images;
       },
-      pagination: {
-          el: '.swiper-pagination',
-      },
-  });
+      error: (err) => {
+        if (err.error.status === 404) {
+          console.log("Pas de fichiers trouvés");
+        }
+    }});
   }
 
+  clickVideo(videoUrl : string){
+    // window.postMessage({
+    //   urlVideo: videoUrl
+    // }, 'http://localhost:4200/');
+    this.router.navigate(['../videoproject', {videoUrl : videoUrl}], { relativeTo: this.route });
+
+  }
 }
 
 

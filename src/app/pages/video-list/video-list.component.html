@@ -1,123 +1,21 @@
 <body>
+    <h1>Brand New Videos</h1>
     <main>
         <section class="cards">
-            <div class="card">
+            <div class="card" *ngFor="let image of images">
                 <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
+                    <img src="{{image.imageUrl}}" (click)="clickVideo(image.videoUrl)" />
                 </div>
                 <div class="cardcontent">
                     <h3 class="cardtitle">
-                        Stuck in the middle
+                        {{image.titre}}
                     </h3>
                     <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
+                        <h1 class="textmedium">{{image.resume}}</h1>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cardimage">
-                    <img src="../../../assets/virgin.png" />
-                </div>
-                <div class="cardcontent">
-                    <h3 class="cardtitle">
-                        Stuck in the middle
-                    </h3>
-                    <div class="cardinfo">
-                        <h1 class="textmedium">30 Min</h1>
-                    </div>
-                </div>
-            </div>
+
         </section>
     </main>
 </body>
