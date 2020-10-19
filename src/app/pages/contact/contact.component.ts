@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Email } from 'src/app/models/email';
 import { EmailService } from 'src/app/services/email.service';
 
@@ -9,35 +10,38 @@ import { EmailService } from 'src/app/services/email.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-alert:boolean=false;
-  submitted: boolean;
+messageValid = false;
+FormData: FormGroup;
+
+constructor(private http: HttpClient, private emailService :EmailService, private builder: FormBuilder) { }
 
   ngOnInit(): void {
-  }
-  mail :Email = new Email();
 
-  constructor(private http: HttpClient, private emailService :EmailService) { }
+  this.FormData = this.builder.group({
+  nom: new FormControl('', Validators.required),
+  email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
+  message : new FormControl('', Validators.required),
+  phone : new FormControl('', Validators.required),
+  compagny : new FormControl('', Validators.required),
 
-  public envoiEmail() {
-    this.emailService.envoiEmail(this.mail).subscribe({
+  })
+}
+
+
+
+  public onSubmit(FormData) {
+    this.emailService.envoiEmail(FormData).subscribe({
         next: (data) => {
+          this.messageValid = true;
         console.log(data);
       },
       error: (err) => {
-        console.log("une erreur s'est produite lors de l'envoi du mail.");
+        console.log("une erreur s'est produite lors de l'envoi du mail.", err);
       }
     });
   }
 
-  public onSubmit() {
-    this.envoiEmail();
-    this.submitted = true;
-  }
-  closeAlert(){
-    this.alert=false
-  }
-
-
 }
+
 
 

@@ -22,7 +22,7 @@ main {
 
 .textmedium {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     color: white;
@@ -70,8 +70,7 @@ main {
 .cardtitle {
     margin-bottom: 20px;
     color: #d1deec;
-    font-family: 'Lobster', cursive;
-    text-decoration: underline;
+    font-family: inherit;
 }
 
 .cardinfo {
@@ -116,4 +115,10 @@ h1 {
     color: #efefef;
     padding: 2%;
     letter-spacing: .2rem;
+}
+
+.date {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    font-family: inherit;
 }
