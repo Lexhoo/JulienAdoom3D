@@ -11,10 +11,12 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a routerLink="/mosaique" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">RandHome</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '1','DIRECTION']" class="nav-link" routerLinkActive="active">Direction</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '2','GRAPHIC']" class="nav-link" routerLinkActive="active">Graphic</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '5','VISUAL EFFECT']" class="nav-link" routerLinkActive="active">Visual Effect</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '4','SKETCHBOOK']" class="nav-link" routerLinkActive="active">Sketchbook</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/videolist" routerLinkActive="active">Réalisation</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '2','GRAPHIC']" class="nav-link" routerLinkActive="active">Graphisme</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '5','VISUAL EFFECT']" class="nav-link" routerLinkActive="active">Effets Visuels</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '4','SKETCHBOOK']" class="nav-link" routerLinkActive="active">Croquis</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active"><i class="far fa-envelope"></i></a></li>
+
             </ul>
         </div>
     </nav>

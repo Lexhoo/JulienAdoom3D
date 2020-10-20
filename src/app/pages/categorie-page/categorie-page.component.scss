@@ -29,9 +29,9 @@ h1 {
 
 .masonry {
     background-color: black;
-    columns: 3;
+    columns: 5;
     column-gap: 27px;
-    padding-top: 120px;
+    padding-top: 84px;
     @media (max-width: 1200px) {
         columns: 3;
     }

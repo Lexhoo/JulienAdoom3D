@@ -8,6 +8,7 @@ import { FirstComponent } from './first/first.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoListComponent } from './pages/video-list/video-list.component';
 import { VideoProjectComponent } from './pages/video-project/video-project.component';
+import { ShowreelComponent } from './pages/showreel/showreel.component';
 
 const routes: Routes = [
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} },
   { path: 'videolist', component: VideoListComponent , data: {animation: 'VideoList'} },
   { path: 'videoproject', component: VideoProjectComponent , data: {animation: 'VideoProject'} },
+  { path: 'showreel', component: ShowreelComponent , data: {animation: 'Showreel'} },
 
 
 ];
