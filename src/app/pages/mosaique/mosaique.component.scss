@@ -32,7 +32,7 @@
             top: 0;
             bottom: 0;
             padding: 30px 30px;
-            color: #fff;
+            color: rgb(0, 0, 0);
             display: flex;
             flex-direction: column
         }
@@ -90,12 +90,15 @@ button {
 .box img {
     width: 100%;
     height: auto;
-    transition: all 0.4s linear;
+    transition: all 0.3s linear;
 }
 
 .box:hover img {
     opacity: 0;
-    transform: scale(3);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
 }
 
 .box .box-content {

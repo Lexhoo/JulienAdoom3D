@@ -11,4 +11,5 @@ export class ProjetModel {
   idProjet:number;
   idCategorie:number;
   projetName:string;
+  hasVideo: boolean;
 }

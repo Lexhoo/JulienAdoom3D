@@ -15,6 +15,7 @@ export class ProjetService {
   urlProjet = 'http://localhost:8080/upload/';
   urlIdProjetAndIdCategorie = 'http://localhost:8080/upload/projetcategorie';
   urlgetImagesCategorieByProjet = 'http://localhost:8080/mosaique/categorie/';
+  urlhasVideo = 'http://localhost:8080/upload/imagevideo';
 
   constructor(private http: HttpClient) { }
 
@@ -32,10 +33,8 @@ getImagesCategorieByProjet(idCategorie: number): Observable<UploadFiles[]> {
   return this.http.get<UploadFiles[]>(this.urlgetImagesCategorieByProjet + idCategorie);
 }
 
-getImages() {
-  return this.http.get(
-    "https://accedo-video-app-api.herokuapp.com/getImages",
-    httpOptions
-  );
+getImagesVideos() {
+return this.http.get<UploadFiles[]>(this.urlhasVideo);
 }
+
 }

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+.splatter {
+    background-image: url(../../../assets/whitesplatter.png);
+    background-color: #000000;
+    z-index: 1;
+}
+
+.clients img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.clients img:hover {
+    transform: rotate(1080deg);
+    border-radius: 50%;
+    transition: all 2s;
+    /* transition when the mouse over */
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 5vh;
+}
+
+.jumbotron {
+    background-color: #000000;
+    margin: 0 auto;
+    border-radius: 0;
+    background-image: url(../../../assets/whitesplatter.png);
+}
+
+blockquote .svg-inline--fa {
+    color: red;
+    margin: 1rem;
+}
+
+blockquote {
+    color: white;
+    margin-top: 12%;
+    font-size: larger;
+    font-style: oblique;
+}
+
+.fab {
+    width: 11%;
+}
+
+.fa-facebook-square {
+    color: blue;
+}
+
+.fa-instagram {
+    color: red;
+}
+
+.clients-hr {
+    border-top: .05rem solid blue;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 2rem 0 2rem;
+}
+
+footer img {
+    height: 5rem;
+    margin: 1.5rem 0;
+}
+
+footer a {
+    color: white;
+}
+
+footer svg.svg-inline--fa {
+    font-size: 1.6rem;
+    margin: 1.2rem .5rem 0 0;
+}
+
+footer svg.svg-inline--fa:hover {
+    color: #000000!important;
+}
+
+.row {
+    justify-content: center;
+}
+
+hr.socket {
+    width: 100%;
+    border-top: .2rem solid red;
+    margin-top: 3rem;
+}
+
+.container {
+    background-color: #000000;
+}
+
+.text-center span {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 6vh;
+}
+
+label {
+    color: white;
+}
+
+label span {
+    color: red;
+}
+
+h4 {
+    text-align: center;
+    color: rgb(77, 218, 77);
+}

@@ -1,36 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap');
-header {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-}
-
-.container1 {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar {
-    padding: 5px 0;
-    position: fixed;
-    display: flex;
-    border: thick double #2d2c2c;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.navbar .navbar-light {
-    display: flex;
-}
-
-.navbar-toggler {
-    margin-top: -54px;
+body {
+    overflow-x: hidden;
+    font-family: 'Noto Sans', sans-serif;
+    color: red;
 }
 
 .navbar-brand img {
-    margin-left: 6%;
-    width: 4em;
+    height: 3.2rem;
+    margin-left: 19%;
+}
+
+.navbar-brand img:hover {
+    opacity: .90;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.navbar {
+    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
+    z-index: 1;
+    background: linear-gradient(to right, #000000 5%, #000000c9 50%);
+    border-bottom: thick double #ffffff;
+}
+
+.navbar-nav>li {
+    padding-left: 26px;
 }
 
 .nav-item {
@@ -38,15 +71,60 @@ header {
     text-transform: uppercase;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link:hover,
-.navbar-light .navbar-nav .nav-item.active .nav-link {
+.nav-link {
+    color: #ffffff!important;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(27, 11, 11, 0.57);
+}
+
+// .nav-link.active,
+// .nav-link:hover {
+//     color: red!important;
+// }
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap');
+// header {
+//     position: absolute;
+//     z-index: 10;
+//     width: 100%;
+// }
+// .container1 {
+//     margin: auto;
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .navbar {
+//     padding: 5px 0;
+//     position: fixed;
+//     display: flex;
+//     border: thick double #2d2c2c;
+//     margin: 0 auto;
+//     width: 100%;
+// }
+// .navbar .navbar-light {
+//     display: flex;
+// }
+// .navbar-toggler {
+//     margin-top: -54px;
+// }
+// .navbar-brand img {
+//     margin-left: 6%;
+//     width: 4em;
+// }
+// .nav-item {
+//     font-weight: 800;
+//     text-transform: uppercase;
+// }
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link {
     font-family: 'Noto Sans', sans-serif;
     background: #ec0b36 url(../../../assets/pixel.png);
-    transition-delay: 0.5s;
+    transition-delay: 0.7s;
     animation: animate 0.8s steps(8) forwards;
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link:nth-child(2):hover {
+.navbar .navbar-nav .nav-item .nav-link:nth-child(2):hover {
     background: #730bec url(../../../assets/pixel2.png);
     transition-delay: 0.8;
     background-size: 180px;
@@ -62,27 +140,20 @@ header {
     }
 }
 
-.navbar-light .navbar-nav .nav-item .nav-link {
-    color: #e91717;
-    padding: 5px 119px;
-    font-size: 1.4rem;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-.navbar-light .navbar-nav .nav-item .nav-link:hover {
+.navbar .navbar-nav .nav-item .nav-link:hover {
     color: #fff;
     text-decoration: #fff;
 }
 
-.navbar-light .navbar-toggler {
+.navbar .navbar-toggler {
     color: #fff;
-    border: 1px solid #f10000;
+    border: 1px solid #00000065;
     outline: none;
     margin-left: 82%;
-    background-color: #d81e00;
+    background-color: #d01313;
     position: absolute;
-    margin-top: -6px;
-    right: 22px;
+    margin-top: 8px;
+    right: 23px;
 }
 
 a:hover {
@@ -94,24 +165,41 @@ a:hover {
     background: #fff;
 }
 
-.side-bar {
-    width: 65px;
-    height: 100vh;
-    background: linear-gradient(#000, #3a3a3a);
-    position: fixed;
-    right: 0;
-    top: 0;
-}
-
-.useful-links {
-    width: 67px;
-    text-align: center;
-    position: absolute;
-    bottom: 86px;
-}
-
-@media (max-width: 768px) {
-    .side-bar {
-        display: none;
+@media (max-width: 700px) {
+    /* Remplacez 123px par la taille de votre choix */
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(31 15 15 / 57%);
+    }
+    // .navbar-collapse.collapse {
+    //     display: none!important;
+    // }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* cette classe est à ajouter lorsque que vous utilisez une version de Bootstap supérieure ou égale à la 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
     }
 }

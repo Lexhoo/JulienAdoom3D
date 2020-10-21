@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Host, OnInit, Sanitizer } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UploadFiles } from 'src/app/models/upload-files';
+import { ProjetService } from '../../services/projet.service';
 
 @Component({
   selector: 'app-video-list',
@@ -6,18 +10,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent  {
-video:any;
-btn: any;
+  images: UploadFiles[] = [];
 
+  constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {  }
 
-    // Pause and play the video, and change the button text
-    myFunction() {
-        if (this.video.paused) {
-            this.video.play();
-            this.btn.innerHTML = "Pause";
-        } else {
-            this.video.pause();
-            this.btn.innerHTML = "Play";
+  ngOnInit(): void {
+
+    this.projetService.getImagesVideos().subscribe({
+      next: (images) => {
+
+        this.images = images;
+      },
+      error: (err) => {
+        if (err.error.status === 404) {
+          console.log("Pas de fichiers trouvés");
         }
-    }
+    }});
+  }
+
+  clickVideo(videoUrl : string){
+    // window.postMessage({
+    //   urlVideo: videoUrl
+    // }, 'http://localhost:4200/');
+    this.router.navigate(['../videoproject', {videoUrl : videoUrl}], { relativeTo: this.route });
+
+  }
 }
+
+

@@ -11,8 +11,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { VideoListComponent } from './pages/video-list/video-list.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { ImageUpComponent } from './pages/image-up/image-up.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -20,11 +19,11 @@ import { ProjetComponent } from './pages/projet/projet.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { CategoriePageComponent } from './pages/categorie-page/categorie-page.component';
-import { VisualEffectComponent } from './pages/visual-effect/visual-effect.component';
-import { DesignComponent } from './pages/design/design.component';
-import { SketchbookComponent } from './pages/sketchbook/sketchbook.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { ContactComponent } from './pages/contact/contact.component';
+import { VideoProjectComponent } from './pages/video-project/video-project.component';
+import { ShowreelComponent } from './pages/showreel/showreel.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +33,12 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FirstComponent,
     MosaiqueComponent,
     VideoListComponent,
-    ImageUpComponent,
     ProjetComponent,
     FooterComponent,
     CategoriePageComponent,
-    VisualEffectComponent,
-    DesignComponent,
-    SketchbookComponent,
-
+    ContactComponent,
+    VideoProjectComponent,
+    ShowreelComponent
 
 
   ],
@@ -58,7 +55,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FlexLayoutModule,
     LightboxModule,
     NgbModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    ReactiveFormsModule
 
 
     ],
