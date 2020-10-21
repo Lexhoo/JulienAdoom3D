@@ -1,20 +1,14 @@
-<div class="v-header container">
+<div class="v-header container justify-content-center">
     <div class="fullscreen-video-wrap">
         <iframe src="https://player.vimeo.com/video/293402906?quality=1080&autoplay=1&muted=1&loop=1&color=#000000&fun=false&background=false" frameborder=“0” allow="autoplay; fullscreen" allowfullscreen></iframe> </div>
-    <div class="header-overlay"></div>
-</div>
-<div class="home">
-    <h1>Doum.mov</h1>
-    <div class="container">
-        <div class="glitch" data-text="Julien3D">
-            <!-- <a href="#" class="btn btn-primary btn-lg mr-2" routerLink="/contact" routerLinkActive="active">Contact</a> -->
-
-            <h3 class="lead">Créer le contenu audiovisuel qui vous correspond !</h3>
-
-
+    <div class="glitch col-12 col-sm-12 col-md-12  " data-text="Julien3D">
+        <div class="text-center">
+            <h1>Doum.mov</h1>
+            <h3>Créer le contenu audiovisuel qui vous correspond !</h3>
+            <a href="#" class="btn btn-danger btn-lg mb-3 btn-secondary" [routerLink]="['/showreel']" routerLinkActive="router-link-active">ShowReel  <i class="far fa-play-circle"></i></a>
         </div>
-        <a href="#" class="btn btn-danger btn-lg mr-2" [routerLink]="['/showreel']" routerLinkActive="router-link-active">ShowReel  <i class="far fa-play-circle"></i></a>
     </div>
+    <!-- <div class="header-overlay"></div> -->
 </div>
 <app-mosaique></app-mosaique>
 
