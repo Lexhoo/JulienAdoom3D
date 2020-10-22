@@ -14,12 +14,8 @@
         overflow-x: hidden;
     }
 
-    .header-overlay img {
-        width: 100%;
-    }
-
     .v-header {
-        height: 100vh;
+        height: 92vh;
         display: flex;
         align-items: center;
         color: #fff;
@@ -58,7 +54,6 @@
         top: 0;
         left: 0;
         background-image: url(../../../assets/g3.png);
-        // z-index: 1;
         opacity: 0.40;
     }
 
@@ -105,7 +100,8 @@
 
     .glitch {
         position: relative;
-        top: -17%;
+        z-index: 1;
+        top: -10%;
         border-radius: 2px;
         animation: glitch-skew 4s cubic-bezier(0.10, 0.46, 0.15, 0.94) 3s infinite;
         font-family: orbitron, sans-serif;
