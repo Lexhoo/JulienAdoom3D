@@ -24,6 +24,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoProjectComponent } from './pages/video-project/video-project.component';
 import { ShowreelComponent } from './pages/showreel/showreel.component';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { ShowreelComponent } from './pages/showreel/showreel.component';
     ShowreelComponent
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { ShowreelComponent } from './pages/showreel/showreel.component';
     LightboxModule,
     NgbModule,
     NgImageSliderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule
 
 
     ],
