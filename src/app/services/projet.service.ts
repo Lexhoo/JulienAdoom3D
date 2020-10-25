@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ProjetModel } from '../models/projet-model';
 import { UploadFiles } from '../models/upload-files';
+import { environment } from '../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({ "Content-Type": "application/json" })
@@ -12,10 +13,10 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ProjetService {
-  urlProjet = 'http://localhost:8080/upload/';
-  urlIdProjetAndIdCategorie = 'http://localhost:8080/upload/projetcategorie';
-  urlgetImagesCategorieByProjet = 'http://localhost:8080/mosaique/categorie/';
-  urlhasVideo = 'http://localhost:8080/upload/imagevideo';
+  urlProjet = environment.URL + '/upload/';
+  urlIdProjetAndIdCategorie = environment.URL + '/upload/projetcategorie';
+  urlgetImagesCategorieByProjet = environment.URL + '/mosaique/categorie/';
+  urlhasVideo = environment.URL + '/upload/imagevideo';
 
   constructor(private http: HttpClient) { }
 
