@@ -17,6 +17,9 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
+                        "allowedCommonJsDependencies": [
+                            "lodash"
+                        ],
                         "outputPath": "dist/Julien3d",
                         "index": "src/index.html",
                         "main": "src/main.ts",
@@ -33,14 +36,14 @@
                             "node_modules/font-awesome/css/font-awesome.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/@fortawesome/fontawesome-free/css/all.css",
-                            "src/assets/css/progresscircle.css",
+                            "src/assets/css/progresscircle.css"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.min.js",
                             "src/assets/jsFolder/lightlight.js",
                             "node_modules/@fortawesome/fontawesome-free/css/all.css",
                             "src/assets/jsFolder/video.js",
-                            "src/assets/jsFolder/progresscircle.js",
+                            "src/assets/jsFolder/progresscircle.js"
 
 
                         ]
