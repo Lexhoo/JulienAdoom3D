@@ -25,6 +25,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { VideoProjectComponent } from './pages/video-project/video-project.component';
 import { ShowreelComponent } from './pages/showreel/showreel.component';
 import {MatIconModule} from '@angular/material/icon';
+import { PartenairesComponent } from './pages/partenaires/partenaires.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {MatIconModule} from '@angular/material/icon';
     CategoriePageComponent,
     ContactComponent,
     VideoProjectComponent,
-    ShowreelComponent
+    ShowreelComponent,
+    PartenairesComponent
 
 
 
