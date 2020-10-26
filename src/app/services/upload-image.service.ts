@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UploadFiles } from '../models/upload-files';
-import { environment } from '../../environments/environment';
 
-const Url = environment.URL + 'mosaique';
-const urlGraphic = environment.URL + '/upload/categorie/';
+const Url = 'http://localhost:8080/mosaique';
+const urlGraphic = 'http://localhost:8080/upload/categorie/';
 
 
 @Injectable({

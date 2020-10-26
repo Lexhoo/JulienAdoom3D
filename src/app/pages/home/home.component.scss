@@ -333,7 +333,6 @@
         text-align: center;
         text-transform: uppercase;
         font-family: 'Oswald', sans-serif;
-        margin-top: -18%;
         text-shadow: 4px 3px 1.4px #3b080f, 0 0 1em black, 0 0 0.4em #000000;
         animation: glitch-skew 4s cubic-bezier(.25, .46, .45, .94) 4s infinite;
     }
@@ -361,4 +360,11 @@
             font-size: .6rem;
             margin-bottom: 37%;
         }
+        a span {
+            width: 5%;
+        }
+    }
+    
+    a span {
+        position: absolute;
     }
