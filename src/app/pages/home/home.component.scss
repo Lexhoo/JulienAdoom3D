@@ -67,6 +67,7 @@
         margin-top: 6%;
         background-color: #f11c0d;
         border-color: #f11c0d;
+        display: inline-flex;
     }
     
     .btn:hover {
@@ -359,12 +360,13 @@
         .btn {
             font-size: .6rem;
             margin-bottom: 37%;
+            display: inline-flex;
         }
-        a span {
-            width: 5%;
+        a li {
+            font-size: 1.5rem;
         }
     }
     
-    a span {
-        position: absolute;
+    a li {
+        font-size: 122.7%;
     }
