@@ -31,12 +31,12 @@ body {
 }
 
 .fullscreen-video-wrap {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
 }
 
 .fullscreen-video-wrap iframe {
@@ -48,6 +48,8 @@ body {
     height: 100%;
     object-fit: cover;
     background-color: black;
+    width: 100%;
+    position: absolute;
 }
 
 .bg-custom {

@@ -62,7 +62,7 @@ body {
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
     z-index: 1;
     background: linear-gradient(to right, #000000 5%, #000000c9 50%);
-    border-bottom: thick double #ffffff;
+    border-bottom: thick double rgb(255 255 255 / 0.4);
 }
 
 .navbar-nav>li {
