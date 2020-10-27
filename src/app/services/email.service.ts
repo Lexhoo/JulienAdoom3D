@@ -10,7 +10,7 @@ export class EmailService {
 
   constructor(private http :HttpClient) { }
 
-  private baseUrl = 'http://localhost:8080/mail/post';
+  private baseUrl = 'https://doumovieback.doumovie.fr/mail/post';
 
   envoiEmail(email :Email): Observable<any> {
     return this.http.post(`${this.baseUrl}`, email);
