@@ -56,12 +56,12 @@ body {
 }
 
 .navbar {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: .1rem;
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
     z-index: 1;
-    background: linear-gradient(to right, #000000 5%, #000000c9 50%);
+    background: linear-gradient(to right, #000000 5%, #000000 9%);
     border-bottom: thick double rgb(255 255 255 / 0.4);
 }
 
@@ -82,43 +82,6 @@ body {
     background-color: rgba(27, 11, 11, 0.57);
 }
 
-// .nav-link.active,
-// .nav-link:hover {
-//     color: red!important;
-// }
-// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,700&display=swap');
-// header {
-//     position: absolute;
-//     z-index: 10;
-//     width: 100%;
-// }
-// .container1 {
-//     margin: auto;
-//     display: flex;
-//     justify-content: space-between;
-// }
-// .navbar {
-//     padding: 5px 0;
-//     position: fixed;
-//     display: flex;
-//     border: thick double #2d2c2c;
-//     margin: 0 auto;
-//     width: 100%;
-// }
-// .navbar .navbar-light {
-//     display: flex;
-// }
-// .navbar-toggler {
-//     margin-top: -54px;
-// }
-// .navbar-brand img {
-//     margin-left: 6%;
-//     width: 4em;
-// }
-// .nav-item {
-//     font-weight: 800;
-//     text-transform: uppercase;
-// }
 .navbar .navbar-nav .nav-item .nav-link:hover,
 .navbar .navbar-nav .nav-item.active .nav-link {
     font-family: 'Noto Sans', sans-serif;
@@ -170,6 +133,10 @@ a:hover {
 
 @media (max-width: 700px) {
     /* Remplacez 123px par la taille de votre choix */
+    body {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: medium;
+    }
     .navbar-header {
         float: none;
     }
@@ -191,8 +158,8 @@ a:hover {
         float: none;
     }
     .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
     .navbar-text {
         float: none;
@@ -205,4 +172,10 @@ a:hover {
     .collapsing {
         overflow: hidden!important;
     }
+}
+
+.valign-center {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
 }
