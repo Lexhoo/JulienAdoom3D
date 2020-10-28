@@ -12,10 +12,10 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ProjetService {
-  urlProjet = 'https://doumovieback.doumovie.fr/upload/';
-  urlIdProjetAndIdCategorie = 'https://doumovieback.doumovie.fr/upload/projetcategorie';
-  urlgetImagesCategorieByProjet = 'https://doumovieback.doumovie.fr/mosaique/categorie/';
-  urlhasVideo = 'https://doumovieback.doumovie.fr/upload/imagevideo';
+  urlProjet = 'http://localhost:8080/upload/';
+  urlIdProjetAndIdCategorie = 'http://localhost:8080/upload/projetcategorie';
+  urlgetImagesCategorieByProjet = 'http://localhost:8080/mosaique/categorie/';
+  urlhasVideo = 'http://localhost:8080/upload/imagevideo';
 
   constructor(private http: HttpClient) { }
 
