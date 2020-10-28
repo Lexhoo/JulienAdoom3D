@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UploadFiles } from '../models/upload-files';
 
-const Url = 'http://localhost:8080/mosaique';
-const urlGraphic = 'http://localhost:8080/upload/categorie/';
+const Url = 'https://doumovieback.doumovie.fr/mosaique';
+const urlGraphic = 'https://doumovieback.doumovie.fr/upload/categorie/';
 
 
 @Injectable({
