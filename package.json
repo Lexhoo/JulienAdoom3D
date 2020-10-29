@@ -4,13 +4,11 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build:opti": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod",
         "build": "ng build",
+        "build:opti": "node --max_old_space_size=500 ./node_modules/@angular/cli/bin/ng build --prod",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e",
-        "pug-it": "pug src",
-        "pug-it:w": "pug src -P -w"
+        "e2e": "ng e2e"
     },
     "private": true,
     "dependencies": {
