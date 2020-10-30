@@ -20,7 +20,6 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { CategoriePageComponent } from './pages/categorie-page/categorie-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgImageSliderModule } from 'ng-image-slider';
 import { ContactComponent } from './pages/contact/contact.component';
 import { VideoProjectComponent } from './pages/video-project/video-project.component';
 import { ShowreelComponent } from './pages/showreel/showreel.component';
@@ -59,7 +58,6 @@ import { PartenairesComponent } from './pages/partenaires/partenaires.component'
     FlexLayoutModule,
     LightboxModule,
     NgbModule,
-    NgImageSliderModule,
     ReactiveFormsModule,
 
 
