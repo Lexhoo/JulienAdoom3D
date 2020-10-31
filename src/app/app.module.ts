@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
-import { FirstComponent } from './first/first.component';
 import { MosaiqueComponent } from './pages/mosaique/mosaique.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -16,7 +15,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProjetComponent } from './pages/projet/projet.component';
-import { FooterComponent } from './pages/footer/footer.component';
 import { LightboxModule } from 'ngx-lightbox';
 import { CategoriePageComponent } from './pages/categorie-page/categorie-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -33,11 +31,9 @@ import { PartenairesComponent } from './pages/partenaires/partenaires.component'
     AppComponent,
     routingComponents,
     NavBarComponent,
-    FirstComponent,
     MosaiqueComponent,
     VideoListComponent,
     ProjetComponent,
-    FooterComponent,
     CategoriePageComponent,
     ContactComponent,
     VideoProjectComponent,
