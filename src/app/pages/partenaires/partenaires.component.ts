@@ -1,4 +1,6 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-partenaires',
@@ -6,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./partenaires.component.scss']
 })
 export class PartenairesComponent implements OnInit {
+  constructor(private viewportScroller: ViewportScroller) { }
 
-  constructor() { }
-
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
   ngOnInit(): void {
   }
 

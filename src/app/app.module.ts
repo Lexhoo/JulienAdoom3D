@@ -58,8 +58,7 @@ import { PartenairesComponent } from './pages/partenaires/partenaires.component'
     NgbModule,
     NgImageSliderModule,
     ReactiveFormsModule,
-    MatIconModule
-
+    MatIconModule,
 
     ],
   providers: [],

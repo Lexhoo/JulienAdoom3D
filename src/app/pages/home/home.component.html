@@ -1,4 +1,4 @@
-<div class="v-header container justify-content-center">
+<div class="v-header container justify-content-center" id="section1">
     <div class="video-responsive">
         <iframe width="560" height="315" src="https://player.vimeo.com/video/470677562?quality=1080&autoplay=1&muted=1&loop=1&color=#000000&fun=false&background=false" frameborder=“0” allow="autoplay; fullscreen" allowfullscreen></iframe> </div>
     <div class="glitch col-12 col-sm-12 col-md-12  " data-text="Julien3D">
@@ -10,7 +10,9 @@
             </li></a>
         </div>
     </div>
-    <div class="header-overlay"></div>
+    <!-- <div class="header-overlay"></div> -->
+    <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
 </div>
-<app-partenaires></app-partenaires>
-<app-mosaique></app-mosaique>
+<app-partenaires id='section2'></app-partenaires>
+
+<app-mosaique id='section3'></app-mosaique>
