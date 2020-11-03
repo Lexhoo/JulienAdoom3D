@@ -8,6 +8,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { VideoListComponent } from './pages/video-list/video-list.component';
 import { VideoProjectComponent } from './pages/video-project/video-project.component';
 import { ShowreelComponent } from './pages/showreel/showreel.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 const routes: Routes = [
 
@@ -17,9 +18,10 @@ const routes: Routes = [
   { path: 'categorie/:id/:titre', component: CategoriePageComponent , data: {animation: 'Graphic'} },
   { path: 'projet', component: ProjetComponent , data: {animation: 'Projet'} },
   { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} },
-  { path: 'videolist', component: VideoListComponent , data: {animation: 'VideoList'} },
+  { path: 'realisation', component: VideoListComponent , data: {animation: 'VideoList'} },
   { path: 'videoproject', component: VideoProjectComponent , data: {animation: 'VideoProject'} },
   { path: 'showreel', component: ShowreelComponent , data: {animation: 'Showreel'} },
+  { path: 'error', component: ErrorPageComponent , data: {animation: 'error'} },
 
 
 ];

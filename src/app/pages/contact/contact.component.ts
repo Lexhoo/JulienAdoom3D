@@ -21,8 +21,8 @@ constructor(private http: HttpClient, private emailService :EmailService, privat
   nom: new FormControl('', Validators.required),
   email: new FormControl('', [Validators.compose([Validators.required, Validators.email])]),
   message : new FormControl('', Validators.required),
-  phone : new FormControl('', Validators.required),
-  compagny : new FormControl('', Validators.required),
+  phone : new FormControl(),
+  compagny : new FormControl(),
 
   })
 }
@@ -32,6 +32,7 @@ constructor(private http: HttpClient, private emailService :EmailService, privat
   public onSubmit(FormData) {
     this.emailService.envoiEmail(FormData).subscribe({
         next: (data) => {
+          this.FormData.reset();
           this.messageValid = true;
         console.log(data);
       },

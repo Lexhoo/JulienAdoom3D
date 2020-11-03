@@ -42,7 +42,6 @@
         "ng-image-slider": "^2.6.4",
         "ngx-lightbox": "^2.2.2",
         "rxjs": "~6.6.0",
-        "swiper": "^6.3.3",
         "terser": "^4.8.0",
         "tslib": "^2.0.0",
         "zone.js": "~0.10.2"
