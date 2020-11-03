@@ -22,9 +22,8 @@ export class VideoListComponent  {
         this.images = images;
       },
       error: (err) => {
-        if (err.error.status === 404) {
-          console.log("Pas de fichiers trouvés");
-        }
+        this.router.navigate(['error']);
+
     }});
   }
 

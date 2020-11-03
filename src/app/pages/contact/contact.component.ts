@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Email } from 'src/app/models/email';
 import { EmailService } from 'src/app/services/email.service';
 
@@ -13,7 +14,7 @@ export class ContactComponent implements OnInit {
 messageValid = false;
 FormData: FormGroup;
 
-constructor(private http: HttpClient, private emailService :EmailService, private builder: FormBuilder) { }
+constructor(private router: Router, private http: HttpClient, private emailService :EmailService, private builder: FormBuilder) { }
 
   ngOnInit(): void {
 
@@ -34,11 +35,9 @@ constructor(private http: HttpClient, private emailService :EmailService, privat
         next: (data) => {
           this.FormData.reset();
           this.messageValid = true;
-        console.log(data);
       },
       error: (err) => {
-        console.log("une erreur s'est produite lors de l'envoi du mail.", err);
-      }
+        this.router.navigate(['error']);      }
     });
   }
 

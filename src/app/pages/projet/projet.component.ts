@@ -28,15 +28,13 @@ _albums: any;
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.idProjet = params.idProjet;
-      this.projetService.getImagesByProjet(78).subscribe({
+      this.projetService.getImagesByProjet(+params.idProjet).subscribe({
       next: (images) => {
         this.images = images;
       },
       error: (err) => {
         this.router.navigate(['error']);
-       if (err.error.status === 404) {
-         console.log("Pas de fichiers trouvés");
-       }
+
       }});
     });
   }

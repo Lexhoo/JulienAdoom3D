@@ -61,10 +61,7 @@ export class MosaiqueComponent {
    // open lightbox
    this._lightbox.open(this._albums, index);},
     error: (err) => {
-      if (err.error.status === 404) {
-        console.log("Pas de fichiers trouvés");
-      }
-      console.log("err", err);
+      this.router.navigate(['error']);
     }});
   }
 
