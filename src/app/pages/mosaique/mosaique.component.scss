@@ -55,7 +55,7 @@ button {
 }
 
 .grid span {
-    width: 100px;
+    width: 47%;
     height: 2px;
     background-color: #4e03e1;
     display: block;
@@ -95,14 +95,14 @@ button {
 
 .box:hover img {
     opacity: 0;
-    -webkit-transform: translate(-50%, -50%);
+    -webkit-transform: translateY(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .box .box-content {
     color: #fff;
     width: 100%;
-    transform: translateY(-50%) scale(0);
+    transform: translateY(-50%);
     position: absolute;
     top: 50%;
     left: 0;
