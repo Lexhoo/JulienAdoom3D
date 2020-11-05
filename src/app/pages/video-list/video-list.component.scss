@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
@@ -115,10 +119,18 @@ h1 {
     color: #efefef;
     padding: 2%;
     letter-spacing: .2rem;
+    font-size: 5vh;
 }
 
 .date {
     color: rgb(255, 255, 255);
     font-style: italic;
     font-family: inherit;
+}
+
+.titcat {
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    font-size: 2em;
+    background-color: rgba(25 30 64 / 40%);
 }

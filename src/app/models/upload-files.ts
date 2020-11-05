@@ -11,5 +11,6 @@ export class UploadFiles {
   idCategorie:number;
   projetName:string;
   hasVideo: boolean;
+  idSousCategorie: number;
 
 }

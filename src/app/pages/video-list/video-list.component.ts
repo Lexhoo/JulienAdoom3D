@@ -10,6 +10,7 @@ import { ProjetService } from '../../services/projet.service';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent  {
+  imagesClip: UploadFiles[] = [];
   images: UploadFiles[] = [];
 
   constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {  }
@@ -19,7 +20,8 @@ export class VideoListComponent  {
     this.projetService.getImagesVideos().subscribe({
       next: (images) => {
 
-        this.images = images;
+        this.images = images.filter(image => 1 === image.idSousCategorie);
+        this.imagesClip = images.filter(imageClip => 2 === imageClip.idSousCategorie);
       },
       error: (err) => {
         this.router.navigate(['error']);
