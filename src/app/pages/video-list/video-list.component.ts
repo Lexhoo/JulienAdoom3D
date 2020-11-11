@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, Host, OnInit, Sanitizer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,9 +14,14 @@ export class VideoListComponent  {
   imagesClip: UploadFiles[] = [];
   images: UploadFiles[] = [];
 
-  constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer) {  }
+  constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
+
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 
   ngOnInit(): void {
+
 
     this.projetService.getImagesVideos().subscribe({
       next: (images) => {

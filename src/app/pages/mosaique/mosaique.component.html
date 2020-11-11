@@ -1,7 +1,7 @@
 <div class="masonry">
     <div class="grid" *ngFor="let image of images; let i=index">
         <div class="box">
-            <img src="{{ image.imageUrl }}" (click)="open(image)">
+            <img src="{{ image.imageUrl }}" (click)="open(image)" alt="{{image.titre}}">
             <div class="box-content">
                 <h3 class="title">{{image.titre}}</h3>
                 <span class="post">{{image.projetName}}</span>

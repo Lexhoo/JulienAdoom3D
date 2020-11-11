@@ -26,7 +26,7 @@
     <li class="hex" *ngFor="let image of images">
         <div class="hexIn">
             <a class="hexLink" (click)="open(image)">
-                <img src="{{image.imageUrl}}" alt="" />
+                <img src="{{image.imageUrl}}" alt="{{image.titre}}" />
                 <h1>{{image.titre}}</h1>
                 <!-- <h1>{{image.hasVideo}}</h1> -->
                 <p>Some sample text about the article this hexagon leads to</p>

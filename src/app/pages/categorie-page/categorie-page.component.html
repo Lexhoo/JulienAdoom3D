@@ -1,7 +1,7 @@
 <div class="masonry">
     <div class="grid" *ngFor="let image of imgCat">
         <div class="box">
-            <img src="{{image.imageUrl}}" class="rounded" alt="" (click)="onClick(image.idProjet)">
+            <img src="{{image.imageUrl}}" class="rounded" alt="{{image.titre}}" (click)="onClick(image.idProjet)">
             <div class="box-content">
                 <h3 class="title">{{image.titre}}</h3>
             </div>
