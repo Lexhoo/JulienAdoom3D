@@ -1,20 +1,18 @@
 import { ViewportScroller } from '@angular/common';
-import { Component, Host, OnInit, Sanitizer } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UploadFiles } from 'src/app/models/upload-files';
-import { ProjetService } from '../../services/projet.service';
+import { ProjetService } from 'src/app/services/projet.service';
 
 @Component({
-  selector: 'app-video-list',
-  templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.scss']
+  selector: 'app-making-of',
+  templateUrl: './making-of.component.html',
+  styleUrls: ['./making-of.component.scss']
 })
-export class VideoListComponent  {
-  imagesClip: UploadFiles[] = [];
+export class MakingOfComponent implements OnInit {
+
   images: UploadFiles[] = [];
-  imagesAdvertising: UploadFiles[] = [];
-  imagesOther: UploadFiles[] = [];
 
   constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
 
@@ -28,10 +26,8 @@ export class VideoListComponent  {
     this.projetService.getImagesVideos().subscribe({
       next: (images) => {
 
-        this.images = images.filter(image => 1 === image.idSousCategorie);
-        this.imagesClip = images.filter(imageClip => 2 === imageClip.idSousCategorie);
-        this.imagesAdvertising = images.filter(imageAdvertising => 3 === imageAdvertising.idSousCategorie);
-        this.imagesOther = images.filter(imageOther => 4 === imageOther.idSousCategorie);
+        this.images = images;
+
       },
       error: (err) => {
         this.router.navigate(['error']);
@@ -47,5 +43,3 @@ export class VideoListComponent  {
 
   }
 }
-
-

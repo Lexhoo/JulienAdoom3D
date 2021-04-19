@@ -1,6 +1,25 @@
 <body>
-    <h1 id='section1'>REALISATION</h1>
-    <h1 class="titcat">Clips Videos</h1>
+    <h1 id='section1'>DOUM.MOV</h1>
+    <h1 class="titcat" id='section2'>Short films</h1>
+    <main>
+        <section class="cards">
+            <div class="card" *ngFor="let image of images">
+                <div class="cardimage">
+                    <img src="{{image.imageUrl}}" alt="{{image.titre}}" (click)="clickVideo(image.videoUrl)" />
+                </div>
+                <div class="cardcontent">
+                    <h3 class="cardtitle">
+                        {{image.titre}}
+                    </h3>
+                    <h5 class="date">{{image.dateCreation | date: 'yyyy'}} </h5>
+                    <div class="cardinfo">
+                        <h1 class="textmedium">{{image.resume}}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <h1 class="titcat">Music videos</h1>
     <main>
         <section class="cards">
             <div class="card" *ngFor="let image of imagesClip">
@@ -21,10 +40,10 @@
         <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
 
     </main>
-    <h1 class="titcat" id='section2'>Courts Métrages</h1>
+    <h1 class="titcat">Advertising</h1>
     <main>
         <section class="cards">
-            <div class="card" *ngFor="let image of images">
+            <div class="card" *ngFor="let image of imagesAdvertising">
                 <div class="cardimage">
                     <img src="{{image.imageUrl}}" alt="{{image.titre}}" (click)="clickVideo(image.videoUrl)" />
                 </div>
@@ -39,5 +58,28 @@
                 </div>
             </div>
         </section>
+        <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
+    </main>
+    <h1 class="titcat">Others</h1>
+    <main>
+        <section class="cards">
+            <div class="card" *ngFor="let image of imagesOther">
+                <div class="cardimage">
+                    <img src="{{image.imageUrl}}" alt="{{image.titre}}" (click)="clickVideo(image.videoUrl)" />
+                </div>
+                <div class="cardcontent">
+                    <h3 class="cardtitle">
+                        {{image.titre}}
+                    </h3>
+                    <h5 class="date">{{image.dateCreation | date: 'yyyy'}} </h5>
+                    <div class="cardinfo">
+                        <h1 class="textmedium">{{image.resume}}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
     </main>
 </body>

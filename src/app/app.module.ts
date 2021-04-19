@@ -25,6 +25,7 @@ import { ShowreelComponent } from './pages/showreel/showreel.component';
 import {MatIconModule} from '@angular/material/icon';
 import { PartenairesComponent } from './pages/partenaires/partenaires.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { MakingOfComponent } from './pages/making-of/making-of.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     VideoProjectComponent,
     ShowreelComponent,
     PartenairesComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    MakingOfComponent
 
 
 

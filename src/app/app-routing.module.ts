@@ -9,6 +9,7 @@ import { VideoListComponent } from './pages/video-list/video-list.component';
 import { VideoProjectComponent } from './pages/video-project/video-project.component';
 import { ShowreelComponent } from './pages/showreel/showreel.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { MakingOfComponent } from './pages/making-of/making-of.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'projet', component: ProjetComponent , data: {animation: 'Projet'} },
   { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} },
   { path: 'realisation', component: VideoListComponent , data: {animation: 'VideoList'} },
+  { path: 'making-of', component: MakingOfComponent , data: {animation: 'MakingOf'} },
   { path: 'videoproject', component: VideoProjectComponent , data: {animation: 'VideoProject'} },
   { path: 'showreel', component: ShowreelComponent , data: {animation: 'Showreel'} },
   { path: 'error', component: ErrorPageComponent , data: {animation: 'error'} },

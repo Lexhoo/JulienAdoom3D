@@ -1,0 +1,25 @@
+<body>
+    <h1 id='section1'>MAKING-OF</h1>
+    <main>
+        <section class="cards">
+            <div class="card" *ngFor="let image of images">
+                <div class="cardimage">
+                    <img src="{{image.imageUrl}}" alt="{{image.titre}}" (click)="clickVideo(image.videoUrl)" />
+                </div>
+                <div class="cardcontent">
+                    <h3 class="cardtitle">
+                        {{image.titre}}
+                    </h3>
+                    <h5 class="date">{{image.dateCreation | date:'yyyy'}} </h5>
+                    <div class="cardinfo">
+                        <h1 class="textmedium">{{image.resume}}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
+    </main>
+
+
+</body>
