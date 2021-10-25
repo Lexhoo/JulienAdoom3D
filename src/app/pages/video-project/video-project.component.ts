@@ -22,6 +22,10 @@ export class VideoProjectComponent implements OnInit {
 
   }
 
+  goBack() {
+    window.history.back();
+  }
+
   getSafeUrl(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url)
 }

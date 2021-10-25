@@ -15,6 +15,7 @@ export class VideoListComponent  {
   images: UploadFiles[] = [];
   imagesAdvertising: UploadFiles[] = [];
   imagesOther: UploadFiles[] = [];
+  imagesMakingOf: UploadFiles[] = [];
 
   constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
 
@@ -31,7 +32,8 @@ export class VideoListComponent  {
         this.images = images.filter(image => 1 === image.idSousCategorie);
         this.imagesClip = images.filter(imageClip => 2 === imageClip.idSousCategorie);
         this.imagesAdvertising = images.filter(imageAdvertising => 3 === imageAdvertising.idSousCategorie);
-        this.imagesOther = images.filter(imageOther => 4 === imageOther.idSousCategorie);
+        this.imagesMakingOf = images.filter(imageMakingOf => 4 === imageMakingOf.idSousCategorie);
+        this.imagesOther = images.filter(imageOther => 5 === imageOther.idSousCategorie);
       },
       error: (err) => {
         this.router.navigate(['error']);

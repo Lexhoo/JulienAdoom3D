@@ -61,6 +61,38 @@
         <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
 
     </main>
+    <h1 class="titcat">Making-of</h1>
+    <main>
+        <section class="cards">
+            <div class="card" *ngFor="let image of imagesMakingOf">
+                <div class="cardimage">
+                    <img src="{{image.imageUrl}}" alt="{{image.titre}}" (click)="clickVideo(image.videoUrl)" />
+                </div>
+                <div class="cardcontent">
+                    <h3 class="cardtitle">
+                        {{image.titre}}
+                    </h3>
+                    <h5 class="date">{{image.dateCreation | date: 'yyyy'}} </h5>
+                    <div class="cardinfo">
+                        <h1 class="textmedium">{{image.resume}}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+
+    </main>
+    <div class="masonry">
+      <div class="grid" *ngFor="let image of imagesMakingOf; let i=index">
+          <div class="box">
+              <img src="{{ image.imageUrl }}" alt="{{image.titre}}" (click)="clickVideo(image.videoUrl)">
+              <div class="box-content">
+                  <h3 class="title">{{image.titre}}</h3>
+                  <span class="post">{{image.dateCreation | date: 'yyyy'}}</span>
+              </div>
+          </div>
+      </div>
+  </div>
     <h1 class="titcat">Others</h1>
     <main>
         <section class="cards">
