@@ -4,6 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UploadFiles } from 'src/app/models/upload-files';
 import { ProjetService } from '../../services/projet.service';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-video-list',
@@ -16,8 +17,10 @@ export class VideoListComponent  {
   imagesAdvertising: UploadFiles[] = [];
   imagesOther: UploadFiles[] = [];
   imagesMakingOf: UploadFiles[] = [];
+  closeResult = '';
+  imagePopin = new UploadFiles();
 
-  constructor(private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
+  constructor(private modalService: NgbModal, private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
 
   onClickScroll(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
@@ -48,6 +51,36 @@ export class VideoListComponent  {
     this.router.navigate(['../videoproject', {videoUrl : videoUrl}], { relativeTo: this.route });
 
   }
+
+  open(content, image: UploadFiles) {
+    this.imagePopin = image;
+    this.modalService.open(content,
+   {ariaLabelledBy: 'modal-basic-title'}).result.then(
+     (result)=> {
+       `Closed with: ${result}`;
+    },
+    (reason) => {
+      this.closeResult =
+         `Dismissed ${this.getDismissReason(reason)}`;
+         this.imagePopin = null;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+
+    if (reason === ModalDismissReasons.ESC) {
+      this.imagePopin = null;
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      this.imagePopin = null;
+      return 'by clicking on a backdrop';
+    } else {
+      this.imagePopin = null;
+      return `with: ${reason}`;
+    }
+  }
 }
+
+
 
 

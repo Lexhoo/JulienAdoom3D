@@ -26,6 +26,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { PartenairesComponent } from './pages/partenaires/partenaires.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { MakingOfComponent } from './pages/making-of/making-of.component';
+import { ModalBasicComponent } from './modal-basic/modal-basic.component';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { MakingOfComponent } from './pages/making-of/making-of.component';
     ShowreelComponent,
     PartenairesComponent,
     ErrorPageComponent,
-    MakingOfComponent
+    MakingOfComponent,
+    ModalBasicComponent
 
 
 
