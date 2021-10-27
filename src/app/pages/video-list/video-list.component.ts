@@ -19,6 +19,7 @@ export class VideoListComponent  {
   imagesMakingOf: UploadFiles[] = [];
   closeResult = '';
   imagePopin = new UploadFiles();
+  imagesPopin: UploadFiles[] = [];
 
   constructor(private modalService: NgbModal, private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
 
@@ -53,17 +54,30 @@ export class VideoListComponent  {
   }
 
   open(content, image: UploadFiles) {
-    this.imagePopin = image;
-    this.modalService.open(content,
-   {ariaLabelledBy: 'modal-basic-title'}).result.then(
-     (result)=> {
-       `Closed with: ${result}`;
-    },
-    (reason) => {
-      this.closeResult =
-         `Dismissed ${this.getDismissReason(reason)}`;
-         this.imagePopin = null;
+    this.projetService.getImagesByProjet(image.idProjet).subscribe({
+      next: (images) => {
+        this.imagesPopin = images;
+        this.imagePopin = image;
+        this.openPopin(content);
+
+      },
+      error: (err) => {
+        this.router.navigate(['error']);
+      }
     });
+  }
+
+  private openPopin(content: any) {
+    this.modalService.open(content,
+      { ariaLabelledBy: 'modal-basic-title' }).result.then(
+        (result) => {
+          `Closed with: ${result}`;
+        },
+        (reason) => {
+          this.closeResult =
+            `Dismissed ${this.getDismissReason(reason)}`;
+          this.imagePopin = null;
+        });
   }
 
   private getDismissReason(reason: any): string {
