@@ -183,3 +183,27 @@ a:hover {
     vertical-align: middle;
     align-items: center;
 }
+
+.btn {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-width: 0%;
+  margin-top: 6%;
+  background-color: #f11c0d9a;
+  border-radius: 0%;
+  // border-color: #f11c0d50;
+  display: inline-flex;
+}
+
+// .btn:hover {
+//   background: rgba(rgb(0, 0, 0), 0.8);
+//   color: #f11c0d;
+//   font-weight: 900;
+//   letter-spacing: 1px;
+//   backface-visibility: hidden;
+//   border: 1px solid rgba(rgb(0, 0, 0), 0);
+//   transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+// }

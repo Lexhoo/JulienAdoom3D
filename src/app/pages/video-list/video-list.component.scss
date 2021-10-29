@@ -334,26 +334,7 @@
 // }
 
 
-.photo {
-  width: 100%;
-}
 
-// .modal-content {
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   width: 175%;
-//   pointer-events: auto;
-//   background-color: #fff;
-//   background-clip: padding-box;
-//   border: 1
-// px
-// solid rgba(0,0,0,.2);
-//   border-radius: 0.3
-// rem
-// ;
-//   outline: 0;
-// }
 
 // carrousel
 body,
@@ -391,10 +372,16 @@ a:hover {
  width: 100%;
 }
 .row {
- overflow: scroll;
+ overflow: auto;
  overflow-y: hidden;
  width: 100%;
 }
+::-webkit-scrollbar {
+  overflow: auto;
+  background-color: rgb(37, 37, 37);
+}
+
+
 .row__inner {
  transition: 450ms transform;
  font-size: 0;
@@ -481,5 +468,36 @@ a:hover {
 .tile:hover~.tile {
  transform: translate3d(125px, 0, 0);
 }
+
+::ng-deep .modal-open .modal {
+    background-color: #f8f8f80d;
+}
+
+.photo {
+  width: 100%;
+}
+
+::ng-deep .modal-content {
+  background-color: black;
+  color: grey;
+
+}
+
+::ng-deep .modal-content span {
+  color: grey;
+
+}
+
+.play {
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  border-left: 20px solid black;
+  height: 0px;
+}
+
+::ng-deep .bi .bi-play-circle {
+  color: grey;
+}
+
 
 

@@ -20,6 +20,7 @@ export class VideoListComponent  {
   closeResult = '';
   imagePopin = new UploadFiles();
   imagesPopin: UploadFiles[] = [];
+  host: string;
 
   constructor(private modalService: NgbModal, private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
 
@@ -28,7 +29,6 @@ export class VideoListComponent  {
   }
 
   ngOnInit(): void {
-
 
     this.projetService.getImagesVideos().subscribe({
       next: (images) => {
@@ -47,9 +47,10 @@ export class VideoListComponent  {
 
   clickVideo(videoUrl : string){
     // window.postMessage({
-    //   urlVideo: videoUrl
-    // }, 'http://localhost:4200/');
+    //   urlVideo: "je suis le message"
+    // }, '*');
     this.router.navigate(['../videoproject', {videoUrl : videoUrl}], { relativeTo: this.route });
+    this.modalService.dismissAll('play video');
 
   }
 
@@ -92,6 +93,10 @@ export class VideoListComponent  {
       this.imagePopin = null;
       return `with: ${reason}`;
     }
+  }
+
+  goBack() {
+    window.history.back();
   }
 }
 

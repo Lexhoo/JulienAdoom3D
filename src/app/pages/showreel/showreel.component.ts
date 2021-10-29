@@ -12,4 +12,8 @@ export class ShowreelComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goBack() {
+    window.history.back();
+  }
+
 }

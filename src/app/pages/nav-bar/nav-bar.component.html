@@ -8,14 +8,19 @@
         <span class="navbar-toggler-icon"></span>
       </button>
         </div>
+        <div class="showreel">
+          <a href="#" class="btn btn-lg mb-3 btn-secondary" [routerLink]="['/showreel']" routerLinkActive="router-link-active">ShowReel  <li class="material-icons">
+            play_circle_outline
+          </li></a>
+        </div>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a routerLink="mosaique" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">RandHome</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="realisation" routerLinkActive="active">DOUM.MOV</a></li>
-                <li class="nav-item"><a [routerLink]="['categorie', '2','graphisme']" class="nav-link" routerLinkActive="active">DOUM.JPG</a></li>
+                <li class="nav-item"><a routerLink="randhome" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">RandHome</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="doummov" routerLinkActive="active">DOUM.MOV</a></li>
+                <li class="nav-item"><a [routerLink]="['categorie', '2','doumjpg']" class="nav-link" routerLinkActive="active">DOUM.JPG</a></li>
                 <li class="valign-center">
                     <a class="nav-link" routerLink="/contact" routerLinkActive="active">
-                        <mat-icon>local_post_office</mat-icon>
+                        CONTACT
                     </a>
                 </li>
 

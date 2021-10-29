@@ -19,6 +19,9 @@
             </div>
             </div>
           </div>
+          <!-- <div class="scrollbar" id="style-3">
+            <div class="force-overflow"></div>
+          </div> -->
         </div>
       </div>
       </div>
@@ -44,6 +47,8 @@
             </div>
           </div>
         </div>
+        <div class="header-overlay"></div>
+        <a class="ca3-scroll-down-link ca3-scroll-down-arrow" (click)="onClickScroll('section2')" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
         </div>
       </body>
       </html>
@@ -231,13 +236,13 @@
     </main> -->
 
 
-<div  class="popin">
+<div  class="popin" background-color: black>
 <ng-template #content let-modal>
 	<div class="modal-header">
-		<h1 class="modal-title"
+		<h3 class="modal-title"
 			id="modal-basic-title">
 			{{imagePopin.titre}}
-		</h1>
+		</h3>
 		<button type="button" class="close"
 				aria-label="Close" (click)=
 				"modal.dismiss('Cross click')">
@@ -250,7 +255,7 @@
 	<div class="modal-body">
     <!-- <img class="photo" src="{{ imagePopin.imageUrl }}" alt="{{imagePopin.titre}}"> -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators" *ngFor="let image of imagesPopin; let i=index"; i++>
+      <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
@@ -276,10 +281,16 @@
       </a>
     </div>
 			<div class="description-group">
-				<h2>{{imagePopin.dateCreation | date: 'yyyy'}} </h2>
+       <h4>{{imagePopin.dateCreation | date: 'yyyy'}} </h4>
+       <div class="description-group" (click)="clickVideo(imagePopin.videoUrl)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+        </svg>
+       </div>
 				<div class="description-group">
 					<div class="description-group-append">
-						<h3>{{ imagePopin.resume }}</h3>
+						<p>{{ imagePopin.resume }}</p>
 					</div>
 				</div>
 			</div>

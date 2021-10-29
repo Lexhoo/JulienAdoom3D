@@ -10,7 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 export class VideoProjectComponent implements OnInit {
 
   urlVideo: any;
-  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+    // window.addEventListener("message", (event) => {
+    //   if (event.origin !== "http://example.org:8080")
+    //     return;
+
+    //   // ...
+    // }, false);
+   }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -36,6 +43,7 @@ changeIframe(url) {
 //   @HostListener('window:message', ['$event'])
 //   getVideoUrl(event) {
 // console.log('message reçu 7/7', event.data);
+// this.urlVideo = this.getSafeUrl(event.data.urlVideo);
 
 //   }
 
