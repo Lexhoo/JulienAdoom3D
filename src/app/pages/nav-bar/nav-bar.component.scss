@@ -56,17 +56,16 @@ body {
 }
 
 .navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: .1rem;
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
     z-index: 1;
-    background: linear-gradient(to right, #000000 5%, #000000 9%);
 }
 
 .navbar-nav>li {
@@ -185,17 +184,17 @@ a:hover {
 }
 
 .btn {
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  font-weight: 600;
-  border-width: 0%;
-  margin-top: 6%;
-  background-color: #f11c0d9a;
-  border-radius: 0%;
-  // border-color: #f11c0d50;
-  display: inline-flex;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-width: 0%;
+    margin-top: 6%;
+    background-color: #f11c0d9a;
+    border-radius: 0%;
+    // border-color: #f11c0d50;
+    display: inline-flex;
 }
 
 // .btn:hover {
