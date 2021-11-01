@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap');
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Big Shoulders Text', cursive;
     font-size: 1rem;
     line-height: 1.5s;
     color: #333;
@@ -77,14 +78,14 @@ body {
     color: #f11c0d;
     font-size: 3rem;
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Big Shoulders Text', cursive;
 }
 
 .glitch h3 {
     font-size: 18px;
     text-shadow: .1rem .1rem .3rem rgba(0, 0, 0, 1);
     color: white;
-    font-family: 'Krona One', sans-serif;
+    font-family: 'Big Shoulders Text', cursive;
     text-transform: uppercase;
     background-color: rgb(56 31 31 / 0.4);
 }
@@ -100,7 +101,7 @@ body {
     top: -10%;
     border-radius: 2px;
     animation: glitch-skew 4s cubic-bezier(0.10, 0.46, 0.15, 0.94) 3s infinite;
-    font-family: orbitron, sans-serif;
+    font-family: 'Big Shoulders Text', cursive;
     font-size: 4rem;
     font-weight: 900;
     line-height: 1;
@@ -190,7 +191,7 @@ body {
 
  :root {
     box-sizing: border-box;
-    font-family: 'Oswald', Arial, sans-serif;
+    font-family: 'Big Shoulders Text', cursive;
     font-size: 20px;
     * {
         box-sizing: border-box;
@@ -328,7 +329,7 @@ body {
     color: red;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Big Shoulders Text', cursive;
     text-shadow: 4px 3px 1.4px #3b080f, 0 0 1em black, 0 0 0.4em #000000;
     animation: glitch-skew 4s cubic-bezier(.25, .46, .45, .94) 4s infinite;
 }
@@ -342,7 +343,7 @@ body {
         color: red;
         text-align: center;
         text-transform: uppercase;
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Big Shoulders Text', cursive;
         margin-top: 25%;
         text-shadow: 4px 3px 1.4px #3b080f, 0 0 1em black, 0 0 0.4em #000000;
         animation: glitch-skew 4s cubic-bezier(.25, .46, .45, .94) 4s infinite;

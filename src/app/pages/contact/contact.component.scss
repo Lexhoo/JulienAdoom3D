@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -22,10 +23,9 @@
 }
 
 h3 {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Big Shoulders Text', cursive;
     color: rgb(14 7 228 / 1);
     font-size: 5vh;
-    margin-top: 64px;
 }
 
 .jumbotron {
@@ -44,8 +44,7 @@ blockquote {
     color: white;
     margin-top: 5%;
     font-size: 28px;
-    font-style: oblique;
-    font-family: 'Noto Sans';
+    font-family: 'Big Shoulders Text', cursive;
 }
 
 .fab {
@@ -77,6 +76,7 @@ footer img {
 
 footer a {
     color: white;
+    font-family: 'Big Shoulders Text', cursive;
 }
 
 footer svg.svg-inline--fa {
@@ -104,13 +104,14 @@ hr.socket {
 }
 
 .text-center span {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Big Shoulders Text', cursive;
     color: white;
     font-size: 6vh;
 }
 
 label {
     color: white;
+    font-family: 'Big Shoulders Text', cursive;
 }
 
 label span {
