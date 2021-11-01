@@ -16,6 +16,7 @@ export class ProjetService {
   urlIdProjetAndIdCategorie = 'https://doumovieback.doumovie.fr/upload/projetcategorie';
   urlgetImagesCategorieByProjet = 'https://doumovieback.doumovie.fr/mosaique/categorie/';
   urlhasVideo = 'https://doumovieback.doumovie.fr/upload/imagevideo';
+  urlImagesVitrine = 'https://doumovieback.doumovie.fr/upload/doumjpg';
 
   constructor(private http: HttpClient) { }
 
@@ -36,5 +37,9 @@ getImagesCategorieByProjet(idCategorie: number): Observable<UploadFiles[]> {
 getImagesVideos() {
 return this.http.get<UploadFiles[]>(this.urlhasVideo);
 }
+
+getImagesVitrine() {
+  return this.http.get<UploadFiles[]>(this.urlImagesVitrine);
+  }
 
 }
