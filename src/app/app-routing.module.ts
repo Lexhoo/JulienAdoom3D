@@ -14,8 +14,8 @@ import { MakingOfComponent } from './pages/making-of/making-of.component';
 const routes: Routes = [
 
   { path: '', pathMatch: 'full', redirectTo: '/home' },
-  { path: 'randhome', component: HomeComponent , data: {animation: 'Home'} },
-  { path: 'mosaique', component: MosaiqueComponent , data: {animation: 'RandHome'} },
+  { path: 'home', component: HomeComponent , data: {animation: 'Home'} },
+  { path: 'randhome', component: MosaiqueComponent , data: {animation: 'RandHome'} },
   { path: 'categorie/:id/:titre', component: CategoriePageComponent , data: {animation: 'Graphic'} },
   { path: 'projet', component: ProjetComponent , data: {animation: 'Projet'} },
   { path: 'contact', component: ContactComponent , data: {animation: 'Contact'} },
