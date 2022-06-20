@@ -4,6 +4,7 @@ import { UploadImageService } from '../../services/upload-image.service';
 import { UploadFiles } from 'src/app/models/upload-files';
 import { Lightbox } from 'ngx-lightbox';
 import { ProjetService } from 'src/app/services/projet.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-mosaique',
@@ -16,7 +17,7 @@ export class MosaiqueComponent {
   _albums: any;
 
   constructor(private projetService: ProjetService, private _lightbox: Lightbox, private uploadImageService: UploadImageService,
-    private router: Router, private route: ActivatedRoute) {
+    private router: Router, private route: ActivatedRoute, private viewportScroller: ViewportScroller) {
 
   }
 
@@ -63,6 +64,10 @@ export class MosaiqueComponent {
     error: (err) => {
       this.router.navigate(['error']);
     }});
+  }
+
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
 
