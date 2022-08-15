@@ -21,6 +21,11 @@ export class VideoListComponent  {
   imagePopin = new UploadFiles();
   imagesPopin: UploadFiles[] = [];
   host: string;
+  hasImages: boolean;
+  hasImagesClip: boolean;
+  hasImagesAdvertising: boolean;
+  hasImagesMakingOf: boolean;
+  hasImagesOther: boolean;
 
   constructor(private modalService: NgbModal, private projetService: ProjetService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private viewportScroller: ViewportScroller) {  }
 
@@ -34,10 +39,15 @@ export class VideoListComponent  {
       next: (images) => {
 
         this.images = images.filter(image => 1 === image.idSousCategorie);
+        this.hasImages = this.images.length >= 1;
         this.imagesClip = images.filter(imageClip => 2 === imageClip.idSousCategorie);
+        this.hasImagesClip = this.imagesClip.length >= 1;
         this.imagesAdvertising = images.filter(imageAdvertising => 3 === imageAdvertising.idSousCategorie);
+        this.hasImagesAdvertising = this.imagesAdvertising.length >= 1;
         this.imagesMakingOf = images.filter(imageMakingOf => 4 === imageMakingOf.idSousCategorie);
+        this.hasImagesMakingOf = this.imagesMakingOf.length >= 1;
         this.imagesOther = images.filter(imageOther => 5 === imageOther.idSousCategorie);
+        this.hasImagesOther = this.imagesOther.length >= 1;
       },
       error: (err) => {
         this.router.navigate(['error']);

@@ -36,7 +36,6 @@ h1 {
     background-color: rgba(49, 49, 49, 0.5);
     columns: 5;
     column-gap: 27px;
-    padding-top: 84px;
     @media (max-width: 1200px) {
         columns: 3;
     }
@@ -66,7 +65,7 @@ h1 {
             top: 0;
             bottom: 0;
             padding: 30px 30px;
-            color: #fff;
+            color: rgb(139, 30, 30);
             display: flex;
             flex-direction: row;
         }
