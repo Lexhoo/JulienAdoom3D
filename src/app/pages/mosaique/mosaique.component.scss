@@ -1,5 +1,4 @@
 .masonry {
-    background-color: black;
     columns: 4;
     column-gap: 27px;
     padding-top: 90px;
@@ -127,4 +126,137 @@ button {
     font-size: 20px;
     margin-top: 7px;
     text-transform: uppercase;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap');
+.all {
+    padding-bottom: 60px;
+    background-image: url('../../../assets/Fond_doumov.png');
+}
+
+.gallery-block .heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gallery-block .heading h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.gallery-block.cards-gallery h6 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.gallery-block.cards-gallery .card {
+    transition: 0.4s easy;
+    justify-content: space-around;
+}
+
+.gallery-block.cards-gallery .card img {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-block.cards-gallery .card-body {
+    text-align: center;
+}
+
+.gallery-block.cards-gallery .card-body p {
+    font-size: 15px;
+}
+
+.gallery-block.cards-gallery a {
+    color: #212529;
+}
+
+.gallery-block.cards-gallery a:hover {
+    text-decoration: none;
+}
+
+.gallery-block.cards-gallery .card {
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    background-color: #0000007d;
+}
+
+@media (min-width: 576px) {
+    .gallery-block .transform-on-hover:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15) !important;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: #fefefe;
+    font-size: 6vh;
+    text-shadow: .1rem .1rem .1rem #b3b3b3;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Text', cursive;
+    text-align: center;
+    margin-bottom: 0.5em;
+    margin-top: 0.6em;
+}
+
+[data-ca3_icon]::before {
+    font-weight: normal;
+    content: attr(data-ca3_icon);
+}
+
+
+/*animated scroll arrow animation*/
+
+@-webkit-keyframes ca3_fade_move_down {
+    0% {
+        -webkit-transform: translate(0, -20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes ca3_fade_move_down {
+    0% {
+        -moz-transform: translate(0, -20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -moz-transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+@keyframes ca3_fade_move_down {
+    0% {
+        transform: translate(0, -20px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+}
+
+body {
+    background-color: #f11c0d00;
 }

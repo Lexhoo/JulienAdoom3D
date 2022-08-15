@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="masonry">
     <div class="grid" *ngFor="let image of images; let i=index">
         <div class="box">
@@ -5,8 +6,55 @@
             <div class="box-content">
                 <h3 class="title">{{image.titre}}</h3>
                 <span class="post">{{image.projetName}}</span>
+=======
+<div class="all">
+    <div class="masonry">
+        <div class="grid" *ngFor="let image of images; let i=index">
+            <div class="box">
+                <img src="{{ image.imageUrl }}" (click)="open(image)" alt="{{image.titre}}">
+                <div class="box-content">
+                    <h3 class="title">{{image.titre}}</h3>
+                    <span class="post">{{image.projetName}}</span>
+                </div>
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
             </div>
         </div>
         <!-- <button [routerLink]="['/../projet', image.idProjet]"><i class="material-icons">label_important</i></button> -->
     </div>
+
+    <body>
+        <section class="gallery-block cards-gallery">
+            <h1>COLLABORATIONS</h1>
+            <div class="container">
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/decat.png" class="card-img-top" alt="logo decathlon">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/HP_logo_630x630.png" class="card-img-top" alt="logo hp">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/france3.png" class="card-img-top" alt="logo france 3">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/francetv.png" class="card-img-top" alt="logo franceTV">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/leroymerlinn.png" class="card-img-top" alt="logo leroy merlin">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/tat.png" class="card-img-top" alt="logo tat">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/wesco-logo-768x91.png" class="card-img-top" alt="logo wesco">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/virgin.png" class="card-img-top" alt="logo virgin">
+                </div>
+                <div class="card" style="width: 20%;">
+                    <img src="../../../assets/partenaires/Adeo_logo.png" class="card-img-top" alt="logo adeo">
+                </div>
+            </div>
+
+        </section>
+    </body>
 </div>

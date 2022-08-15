@@ -1,16 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap');
+// carrousel
+body,
+html {
+    padding: 0 0px;
+    margin: 0;
+    background: #0e0f11;
+    color: #0a6e86;
+    font-family: 'Big Shoulders Text', cursive;
+    min-height: 55vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+<<<<<<< HEAD
 body {
     background-color: #030513;
     background-image: url(../../../assets/CHARA_CAM_CHARA.png);
     background-repeat: no-repeat;
     background-size: contain;
+=======
+h1 {
+    text-align: inherit;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    transition: color 150ms;
+    color: #95a5a6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7f8c8d;
+    text-decoration: underline;
+}
+
+.contain {
+    width: 100%;
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
 }
 
 main {
@@ -20,12 +66,22 @@ main {
     padding: 87px 0;
 }
 
+<<<<<<< HEAD
 .textmedium {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     color: white;
+=======
+::-webkit-scrollbar {
+    overflow: auto;
+    background-color: transparent;
+}
+
+h1 {
+    color: #fffffff2;
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
 }
 
 .cards {
@@ -50,9 +106,20 @@ main {
 
 .cardimage {
     width: 100%;
+<<<<<<< HEAD
     padding-top: 56.25%;
     overflow: hidden;
     position: relative;
+=======
+    font-size: 30px;
+    top: 34%;
+    text-align: center;
+    z-index: 2;
+}
+
+.tile:hover .tile__details {
+    opacity: 1;
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
 }
 
 .cardimage img {

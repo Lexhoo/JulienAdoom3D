@@ -2,15 +2,17 @@
 body {
     overflow-x: hidden;
     font-family: 'Noto Sans', sans-serif;
-    color: red;
+    color: rgba(68, 93, 175, 0.521);
+    background-color: #000000
 }
 
 .navbar-brand img {
-    height: 2em;
+    height: 5.1em;
+    border-radius: 65px;
 }
 
 .navbar-brand img:hover {
-    opacity: .90;
+    opacity: .96;
     animation: shake 0.5s;
     animation-iteration-count: infinite;
 }
@@ -52,17 +54,28 @@ body {
 }
 
 .rtanimation {
-    background-color: #000000;
+    background-image: url('../../../assets/Fond_doumov.png');
 }
 
 .navbar {
+<<<<<<< HEAD
+=======
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: .1rem;
     box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .1);
     z-index: 1;
+<<<<<<< HEAD
     background: linear-gradient(to right, #000000 5%, #000000 9%);
     border-bottom: thick double rgb(255 255 255 / 0.4);
+=======
+    background-color: #2363d800
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
 }
 
 .navbar-nav>li {
@@ -85,13 +98,13 @@ body {
 .navbar .navbar-nav .nav-item .nav-link:hover,
 .navbar .navbar-nav .nav-item.active .nav-link {
     font-family: 'Noto Sans', sans-serif;
-    background: #ec0b36 url(../../../assets/pixel.png);
+    background: #fffeff17 url(../../../assets/pixel2.png);
     transition-delay: 0.7s;
     animation: animate 0.8s steps(8) forwards;
 }
 
 .navbar .navbar-nav .nav-item .nav-link:nth-child(2):hover {
-    background: #730bec url(../../../assets/pixel2.png);
+    background: #6c0dda48 url(../../../assets/pixel2.png);
     transition-delay: 0.8;
     background-size: 180px;
     animation: animate 0.8s steps(8) forwards;
@@ -116,7 +129,7 @@ body {
     border: 1px solid #00000065;
     outline: none;
     margin-left: 82%;
-    background-color: #d01313;
+    background-color: #f7f7f765;
     position: absolute;
     margin-top: 8px;
     right: 23px;
@@ -124,7 +137,7 @@ body {
 
 a:hover {
     color: #fff;
-    text-decoration: #fff;
+    text-decoration: rgb(35, 99, 216);
 }
 
 .navabar-collapse {
@@ -179,3 +192,20 @@ a:hover {
     vertical-align: middle;
     align-items: center;
 }
+<<<<<<< HEAD
+=======
+
+.btn {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-width: 0%;
+    margin-top: 6%;
+    background-color: #ecebeba2;
+    border-radius: 0%;
+    // border-color: #f11c0d50;
+    display: inline-flex;
+}
+>>>>>>> fbfce27... Modifications suite aux retours de Julien.
